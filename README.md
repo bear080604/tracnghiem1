@@ -1,31 +1,112 @@
-# ✈️ Ôn Thi Vé Máy Bay – Xuất Nhập Cảnh – Hải Quan
+# 🛫 Ôn tập Vé máy bay & Xuất nhập cảnh
 
-Ứng dụng web ôn thi nghiệp vụ hàng không, xuất nhập cảnh và hải quan dành cho hướng dẫn viên du lịch và nhân viên lữ hành.
+Ứng dụng web ôn thi nghiệp vụ hàng không dành cho hướng dẫn viên du lịch quốc tế.
 
-## ✨ Tính Năng Nổi Bật
+## ✨ Tính năng
 
-1. **🗂️ Thẻ ghi nhớ (Flashcards 3D)**:
-   - 42 thẻ thuật ngữ hàng không, mã đặt chỗ (PNR), mã hãng, hạng vé, MRZ hộ chiếu, visa, quy định hành lý & pin sạc.
-   - Hỗ trợ lật thẻ 3D, theo dõi tiến độ học `% Đã thuộc`.
-   - **Tối ưu Mobile**: Vuốt phải (Đã thuộc), Vuốt trái (Chưa thuộc), Chạm (Lật thẻ).
-   - **Phím tắt máy tính**: `Space` (Lật), `←` (Chưa thuộc), `→` (Đã thuộc).
+- **🗂️ Thẻ nhớ (Flashcards)**: 47 thẻ kiến thức với hiệu ứng lật 3D, hỗ trợ vuốt trên mobile
+- **📝 Trắc nghiệm**: 50 câu hỏi bám sát đề thi, chấm điểm tự động
+- **⏱️ Tính giờ bay**: Luyện tập tính thời gian bay với múi giờ khác nhau
+- **🔍 Tra cứu nhanh**: Tìm kiếm thông tin vé máy bay, mã sân bay, visa, hành lý
 
-2. **📝 Trắc nghiệm (Quiz)**:
-   - 26 câu hỏi trắc nghiệm khách quan với phản hồi trực tiếp khi chọn đáp án.
-   - Theo dõi chuỗi đúng liên tiếp (`🔥 Streak`) và bảng tổng kết xếp hạng điểm số kèm pháo hoa (`Confetti`).
+## 🎯 Nội dung
 
-3. **⏱️ Tính giờ bay & Giờ tập trung (Boarding Pass Layout)**:
-   - Mô phỏng thẻ lên máy bay giữa Tân Sơn Nhất (SGN) và các sân bay quốc tế (Tokyo, Seoul, Bắc Kinh, Singapore, Dubai,...).
-   - Hướng dẫn công thức quy đổi múi giờ và tính thời gian bay thực tế.
-   - Hướng dẫn quy định giờ tập trung đoàn quốc tế (trước 3 tiếng, chuyến sau 00:00 tập trung tối hôm trước).
+### 8 phần kiến thức chính:
+1. Đọc vé máy bay (VN300, SSR DOCS, +1, HK/RR/HL/UN)
+2. Mã sân bay (IATA & ICAO) - Việt Nam, Trung Quốc, Đông Á
+3. Hộ chiếu & MRZ
+4. Visa (4 tiêu chí phân loại, visa đoàn TQ, e-Visa)
+5. Hành lý (tiêu chuẩn, pin sạc, chất lỏng)
+6. Land Tour (FOC, TWN/DBL, B/L/D)
+7. Hải quan xuất nhập cảnh
+8. Họp đoàn & xử lý tình huống
 
-4. **🔍 Tra cứu nhanh (Quick Search)**:
-   - Tìm kiếm tức thì theo từ khóa trong toàn bộ 42 thẻ ghi nhớ.
+## 🚀 Sử dụng
 
-5. **🌙 Dark / Light Mode & Âm thanh**:
-   - Chuyển đổi nhanh giao diện Sáng / Tối, lưu cấu hình vào `localStorage`.
-   - Hiệu ứng âm thanh chân thực bằng Web Audio API (không phụ thuộc file ngoài).
+### Chạy trực tiếp:
+Mở file `index.html` bằng trình duyệt web hiện đại (Chrome, Firefox, Safari, Edge).
 
-## 🚀 Cách Sử Dụng
-- Mở trực tiếp file `index.html` hoặc `on_tap_ve_may_bay.html` trên bất kỳ trình duyệt nào (Chrome, Safari, Edge, Firefox).
-- Không cần cài đặt Node.js hay web server.
+### Cấu trúc file:
+```
+├── index.html          # Giao diện chính
+├── data.js            # Dữ liệu câu hỏi & flashcards (MỚI - dễ chỉnh sửa)
+├── data.txt           # Tài liệu gốc (để tham khảo)
+└── README.md          # File này
+```
+
+## 📱 Tương thích
+
+- ✅ Desktop (Chrome, Firefox, Safari, Edge)
+- ✅ Mobile (iOS Safari, Android Chrome)
+- ✅ Tablet
+- ✅ Dark/Light mode tự động
+- ✅ Responsive design
+
+## ⌨️ Phím tắt
+
+**Thẻ nhớ:**
+- `Space`: Lật thẻ
+- `←`: Chưa thuộc
+- `→`: Đã thuộc
+- Hoặc vuốt trái/phải trên mobile
+
+**Trắc nghiệm:**
+- `1-4`: Chọn đáp án A-D
+- `Enter`: Câu tiếp theo
+
+## 🎨 Tính năng UI/UX
+
+- Hiệu ứng lật thẻ 3D mượt mà
+- Confetti animation khi hoàn thành
+- Âm thanh phản hồi (có thể tắt)
+- Progress tracking
+- Touch gestures (vuốt trái/phải)
+- Keyboard shortcuts
+
+## 📝 Cập nhật dữ liệu
+
+**Dễ dàng chỉnh sửa file `data.js`:**
+
+```javascript
+// Thêm flashcard mới
+const CARDS = [
+  ["Câu hỏi", "Câu trả lời với \n xuống dòng"],
+  // ...
+];
+
+// Thêm câu trắc nghiệm mới
+const QS = [
+  ["Câu hỏi", ["Đáp án A", "B", "C", "D"], chỉ_số_đúng],
+  // Chỉ số bắt đầu từ 0: A=0, B=1, C=2, D=3
+];
+
+// Thêm múi giờ cho bài tập tính giờ bay
+const TZ = [
+  ["Tên sân bay (Mã)", chênh_lệch_giờ],
+  ["Tokyo (NRT)", 2],  // Nhanh hơn VN 2 giờ
+];
+```
+
+## 📄 Nguồn tài liệu
+
+Dữ liệu được tổng hợp từ tài liệu "Ôn tập Vé máy bay & Xuất nhập cảnh – Bản dễ hiểu (Đầy đủ 8 phần + Đáp án Đề 3)".
+
+## 🛠️ Công nghệ
+
+- HTML5 + CSS3 + Vanilla JavaScript
+- Không cần framework hay thư viện ngoài
+- Không cần build tools
+- Chạy offline 100%
+- Dữ liệu tách riêng file `data.js` để dễ bảo trì
+
+## 🔄 Cập nhật mới
+
+- ✅ **Tách dữ liệu ra file riêng** `data.js` - dễ chỉnh sửa và bảo trì
+- ✅ Tăng số lượng flashcards lên **47 thẻ** (từ 26 thẻ)
+- ✅ Tăng số lượng câu trắc nghiệm lên **50 câu** (từ 26 câu)
+- ✅ Bổ sung đầy đủ 8 phần kiến thức từ tài liệu gốc
+- ✅ Cập nhật múi giờ Bangkok (0h) vào bài tập tính giờ bay
+
+---
+
+Made with ❤️ for tour guides

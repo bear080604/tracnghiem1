@@ -1,0 +1,609 @@
+Ôn tập Vé máy bay & Xuất nhập cảnh – Bản dễ hiểu (Đầy đủ 8 phần + Đáp án Đề 3)
+Đọc trước: Đề thi hỏi gì, học gì trước
+Đề 3 trong ảnh có 10 câu, chỉ xoay quanh 3 mảng: đọc dòng vé máy bay (câu 1–7), mã sân bay (câu 8–9) và phân loại visa (câu 10). Thuộc 3 mảng này là làm được gần hết đề.
+
+Câu
+Dạng bài
+Cần biết
+1
+Giải mã dòng vé VN300 Y TU14JAN SGNNRT HK15 0010 0745
+Số hiệu chuyến, hạng đặt chỗ, thứ–ngày, chặng bay, trạng thái chỗ, giờ
+2
+Giải mã dòng SSR DOCS (hộ chiếu)
+Thứ tự các ô trong dòng hộ chiếu
+3
+Giải mã 3U8254 SJWCTU 2240 0110+1
+Mã hãng, sân bay, giờ, dấu +1
+4
+Giờ có mặt ở sân bay
+Bay lúc rạng sáng thì có mặt tối hôm trước
+5
+Tính thời gian bay thực tế
+Đổi về cùng múi giờ rồi trừ
+6–7
+Đọc mã sân bay + giờ bay trong chặng
+Mã IATA 3 chữ cái
+8–9
+Liệt kê và giải mã sân bay
+Bảng mã sân bay Việt Nam, Trung Quốc
+10
+Các cách phân loại visa
+4 tiêu chí phân loại
+
+
+Thứ tự học gợi ý (người mới):
+
+Mục "Cách đọc vé máy bay" bên dưới (học cách đọc từng ô, rồi làm Câu 1, 3, 4, 5).
+Bảng mã sân bay (học thuộc SGN, HAN, DAD, CXR, PQC trước, rồi PEK, PVG, CTU, SJW, HGH, KHH, TPE, ICN, NRT).
+Visa: nhớ 4 tiêu chí.
+Hộ chiếu (Câu 2), sau đó mới tới hành lý, land tour, hải quan, họp đoàn (Phần V – VIII) phòng khi đề khác hoặc vấn đáp hỏi.
+Đáp án Đề 3 (10 câu trong ảnh)
+Câu 1. VN300 Y TU14JAN SGNNRT HK15 0010 0745
+Mã
+Ý nghĩa
+VN300
+Số hiệu chuyến bay. VN = mã hãng Vietnam Airlines; 300 = số chuyến
+Y
+Hạng đặt chỗ (booking class): phổ thông giá đầy đủ (full fare), linh hoạt hơn về đổi, hoàn vé
+TU14JAN
+Thứ Ba (TU = Tuesday), ngày 14 tháng 1
+SGNNRT
+Chặng bay: SGN (Tân Sơn Nhất, TP.HCM) đến NRT (Narita, Tokyo, Nhật Bản)
+HK15
+HK = chỗ đã xác nhận (confirmed); 15 = số chỗ đặt cho đoàn (15 khách)
+0010 0745
+Cất cánh 00:10 (giờ VN), hạ cánh 07:45 (giờ Tokyo, nhanh hơn VN 2 giờ). Bay thực tế khoảng 5 giờ 35 phút. Bay 00:10 ngày 14/01 nên khách phải có mặt từ tối 13/01
+
+Câu 2. SSR DOCS VN HK1 P/VNM/C3517842/VNM/15MAR58/M/20AUG32/TRAN/VAN BINH
+SSR DOCS là dòng thông tin hộ chiếu gửi trước cho hãng bay, để hãng chuyển cho cơ quan xuất nhập cảnh nước đến kiểm tra (hệ thống APIS).
+
+Thành phần
+Ý nghĩa
+P
+Loại giấy tờ: hộ chiếu (Passport)
+VNM
+Quốc gia cấp hộ chiếu (Việt Nam)
+C3517842
+Số hộ chiếu
+VNM
+Quốc tịch (Việt Nam)
+15MAR58
+Ngày sinh: 15/03/1958
+M
+Giới tính: nam (Male)
+20AUG32
+Ngày hết hạn hộ chiếu: 20/08/2032
+TRAN / VAN BINH
+Họ / tên (TRAN là họ, VAN BINH là tên lót + tên)
+
+
+Lưu ý: Thông tin phải khớp tuyệt đối với hộ chiếu; sai một ký tự, khách có thể bị từ chối lên máy bay hoặc từ chối nhập cảnh.
+Câu 3. 3U8254 SJWCTU 2240 0110+1
+Mục
+Đáp án
+Tên hãng HK
+Hãng hàng không 3U (Sichuan Airlines – Hàng không Tứ Xuyên)
+Mã HK
+3U (2 ký tự đầu của số hiệu 3U8254; 8254 là số chuyến)
+Tên sân bay đi
+SJW – Thạch Gia Trang
+Tên sân bay đến
+CTU – Thành Đô
+Giờ bay
+22:40
+Giờ đến
+01:10
+Ý nghĩa của "+1"
+Hạ cánh vào ngày hôm sau (rạng sáng ngày kế tiếp). HDV phải báo rõ cho khách; điều hành xác nhận khách sạn cho nhận phòng muộn
+
+Câu 4. TW122 SGN-ICN, Thứ Năm 14-Mar-2024, 01:30–08:30
+Giờ có mặt ở sân bay
+Ngày có mặt
+22:30 (trước giờ bay khoảng 3 tiếng)
+13/03/2024 (tối hôm trước, không phải 14/03)
+
+
+Lý do: Chuyến quốc tế phải có mặt trước 2–3 tiếng để check-in, ký gửi, hải quan, an ninh, xuất cảnh; đoàn đông cần thêm thời gian điểm danh.
+Câu 5. EK393 SGN-DXB: cất cánh 23:55, hạ cánh 04:00 (giờ Dubai), Dubai chậm hơn VN 3 giờ
+Đổi giờ hạ cánh sang giờ Việt Nam: 04:00 + 3 giờ = 07:00 (sáng ngày hôm sau).
+Từ 23:55 đến 07:00 = 7 giờ 05 phút.
+Giờ trên vé luôn là giờ địa phương của từng sân bay, nên phải đổi về cùng múi giờ trước khi trừ.
+Câu 6. CZ6042 SGN-PEK 00:05–05:55 và CZ6077 PVG-SGN 08:45–12:00 (ghi 3 mã sân bay)
+Mã
+Sân bay
+Địa phương
+SGN
+Tân Sơn Nhất
+TP.HCM
+PEK
+Thủ Đô
+Bắc Kinh
+PVG
+Phố Đông
+Thượng Hải
+
+
+Hành trình vào Bắc Kinh, ra Thượng Hải gọi là open-jaw (vào một thành phố, ra từ thành phố khác).
+Câu 7. VJ886 SGN-KHH 07:40–11:40 và VJ843 TPE-SGN 19:10–21:35
+Hãng Vietjet (VJ), tour Đài Loan, hành trình open-jaw (đi Cao Hùng, về từ Đào Viên).
+
+Giờ bay
+Sân bay
+Địa phương
+07:40
+ SGN – Tân Sơn Nhất
+ TP.HCM
+11:40
+ KHH – Cao Hùng
+ Đài Loan
+19:10
+ TPE – Đào Viên
+ Đài Bắc, Đài Loan
+21:35
+ SGN – Tân Sơn Nhất
+ TP.HCM
+
+Câu 8. Mã IATA các sân bay quốc tế chính tại Việt Nam
+Mã
+Sân bay
+Địa phương
+SGN
+Tân Sơn Nhất
+TP.HCM
+HAN
+Nội Bài
+Hà Nội
+DAD
+Đà Nẵng
+Đà Nẵng
+CXR
+Cam Ranh
+Khánh Hòa (Nha Trang)
+PQC
+Phú Quốc
+Phú Quốc
+
+Câu 9. 3U8914 SGNHGH, 3U8254 SJWCTU, 3U8447 CTUSGN (giải mã sân bay)
+Mã
+Sân bay
+Địa phương
+SGN
+Tân Sơn Nhất
+TP.HCM
+HGH
+Hàng Châu (Tiểu Sơn)
+Hàng Châu (Trung Quốc)
+SJW
+Thạch Gia Trang
+Thạch Gia Trang (Trung Quốc)
+CTU
+Thành Đô
+Thành Đô (Trung Quốc)
+
+Câu 10. Các cách phân loại visa (theo đáp án giảng viên chiếu trên lớp)
+Tiêu chí
+Các loại visa
+Mục đích chuyến đi
+Du lịch, Công tác, Du học, Thăm thân nhân (bổ sung: Lao động, Ngoại giao)
+Số lần nhập cảnh
+Single (một lần), Multiple (nhiều lần)
+Hình thức cấp
+Dán, Rời, Đoàn, e-Visa, cấp tại cửa khẩu (VOA)
+Đối tượng
+Cá nhân, đoàn, ngoại giao, công tác
+
+Phần I. Cách đọc vé máy bay từ con số 0
+1.1. Tách dòng vé thành 6 ô (VN300 · Y · TU14JAN · SGNNRT · HK15 · 0010 0745)
+Ô
+Trả lời câu hỏi
+Cách tách & Các mã tương tự trong đề khác
+VN300
+Bay chuyến nào?
+2 chữ đầu = mã hãng (VN Vietnam Airlines, CZ China Southern, VJ Vietjet, 3U Sichuan, TW Tway, EK Emirates, MU China Eastern), phần số = số chuyến
+Y
+Ngồi hạng gì?
+1 chữ = hạng đặt chỗ. Y = phổ thông giá đầy đủ (full fare), linh hoạt hoàn/đổi
+TU14JAN
+Bay ngày nào?
+2 chữ thứ (MO, TU, WE, TH, FR, SA, SU) + số ngày + 3 chữ tháng (JAN đến DEC)
+SGNNRT
+Đi từ đâu đến đâu?
+6 chữ = 3 chữ sân bay đi + 3 chữ sân bay đến
+HK15
+Có chỗ chưa, mấy người?
+2 chữ trạng thái (HK, RR, HL, UN) + số chỗ đặt cho đoàn
+0010 0745
+Mấy giờ?
+Giờ cất cánh + giờ hạ cánh (tính theo giờ địa phương từng sân bay)
+
+1.2. Thứ và tháng viết tắt
+Thứ
+Viết tắt
+Tháng
+Viết tắt
+Thứ Hai
+MO
+Tháng 1 / 2 / 3
+JAN / FEB / MAR
+Thứ Ba
+TU
+Tháng 4 / 5 / 6
+APR / MAY / JUN
+Thứ Tư
+WE
+Tháng 7 / 8 / 9
+JUL / AUG / SEP
+Thứ Năm
+TH
+Tháng 10 / 11 / 12
+OCT / NOV / DEC
+Thứ Sáu
+FR
+
+
+
+
+Thứ Bảy
+SA
+
+
+
+
+Chủ Nhật
+SU
+
+
+
+
+
+1.3. Mã trạng thái chỗ (Câu 7 file ôn)
+Mã
+Ý nghĩa
+Giao vé cho đoàn?
+HK
+Chỗ đã được xác nhận (Confirmed)
+ Có
+RR
+Chỗ đã được tái xác nhận (Reconfirmed)
+ Có
+HL
+Đang trong danh sách chờ (Hold list)
+ Chưa
+UN
+Hãng không thể cung cấp chỗ (Unable)
+ Không
+
+1.4. Số hiệu chuyến bay, PNR và Số vé
+Cặp số hiệu chuyến đi và về: Thường đánh số liền nhau chênh 1 đơn vị (MU9634/MU9633, TW122/TW121, EK393/EK392, CZ6078/CZ6077).
+PNR (Passenger Name Record): Mã đặt chỗ 6 ký tự (ví dụ NW4WSJ, NV47L6), dùng chung cho cả booking.
+Số vé (Ticket number): Gồm 13 chữ số, cấp riêng cho từng hành khách. 3 số đầu là mã hãng phát hành (784 = China Southern, 738 = Vietnam Airlines).
+1.5. Ba kỹ năng tính toán giờ bay
+Dấu +1 sau giờ đến (0110+1): Hạ cánh lúc 01:10 rạng sáng ngày hôm sau. HDV phải báo rõ cho khách và điều hành dặn khách sạn giữ phòng nhận muộn.
+Giờ có mặt ở sân bay: Bay quốc tế có mặt trước 2–3 tiếng (đoàn đông lấy 3 tiếng). Nếu bay sau 0 giờ (00:10, 01:30, 01:40), phải lùi về buổi tối ngày hôm trước.
+Tính thời gian bay thực tế: Đổi giờ hạ cánh về giờ Việt Nam rồi trừ giờ cất cánh (Nhật Bản/Hàn Quốc nhanh hơn VN 2 giờ; Trung Quốc/Singapore nhanh hơn 1 giờ; Thái Lan cùng giờ; Dubai chậm hơn 3 giờ).
+1.6. Mã yêu cầu dịch vụ đặc biệt (SSR)
+Mã
+Ý nghĩa
+SSR WCHR
+Xe lăn cho khách khó đi bộ xa, nhưng vẫn tự lên xuống cầu thang và tự đi lại trong máy bay được
+SSR WCHS
+Khách không tự lên xuống cầu thang được
+SSR WCHC
+Khách không tự di chuyển được hoàn toàn
+SSR DOCS
+Thông tin hộ chiếu gửi trước cho hãng bay để chuyển cho xuất nhập cảnh nước đến (hệ thống APIS)
+
+Phần II. Hệ thống Mã sân bay (IATA & ICAO)
+2.1. Phân biệt IATA và ICAO
+Tiêu chí
+IATA
+ICAO
+Số chữ cái
+3 chữ cái
+4 chữ cái
+Dùng cho
+Đặt vé, vé máy bay, thẻ hành lý, giao dịch du lịch
+Điều hành bay, không lưu
+Ví dụ Tân Sơn Nhất
+SGN (giữ từ tên Sài Gòn cũ)
+VVTS
+
+2.2. Việt Nam (11 sân bay quốc tế chính)
+Mã
+Sân bay
+Địa phương
+Ghi chú
+SGN
+Tân Sơn Nhất
+TP.HCM
+Giữ nguyên từ tên Sài Gòn cũ
+HAN
+Nội Bài
+Hà Nội
+
+
+DAD
+Đà Nẵng
+Đà Nẵng
+
+
+CXR
+Cam Ranh
+Khánh Hòa (Nha Trang)
+Nha Trang không có mã NHA, phải bay đến CXR cách 30–35 km
+PQC
+Phú Quốc
+Phú Quốc
+
+
+HPH
+Cát Bi
+Hải Phòng
+
+
+VDO
+Vân Đồn
+Quảng Ninh
+Gần vịnh Hạ Long
+VCA
+Cần Thơ
+Cần Thơ
+
+
+HUI
+Phú Bài
+Huế
+
+
+VII
+Vinh
+Nghệ An
+
+
+DLI
+Liên Khương
+Đà Lạt
+
+
+
+2.3. Trung Quốc, Đông Á, ASEAN & Khu vực khác
+Khu vực
+Mã sân bay & Thành phố
+Lưu ý cặp sân bay cùng thành phố (Bẫy nối chuyến/đón đoàn)
+Trung Quốc
+PEK (Thủ Đô BK), PKX (Đại Hưng BK), PVG (Phố Đông TH), SHA (Hồng Kiều TH), CTU (Thành Đô), SJW (Thạch Gia Trang), HGH (Hàng Châu), KMG (Côn Minh), NKG (Nam Kinh), TEN (Đồng Nhân), CKG (Trùng Khánh)
+Thượng Hải: PVG chủ yếu bay quốc tế, SHA chủ yếu bay nội địa (đổi sân bay mất >1 giờ). Bắc Kinh có PEK và PKX
+Hàn Quốc
+ICN (Incheon - Seoul), GMP (Gimpo - Seoul), PUS (Busan - Gimhae), CJU (Jeju)
+Seoul: ICN bay quốc tế chính; GMP chủ yếu bay nội địa và chặng ngắn
+Nhật Bản
+NRT (Narita - Tokyo), HND (Haneda - Tokyo), KIX (Kansai - Osaka)
+Tokyo có 2 sân bay NRT và HND
+Đài Loan, HK, Ma Cao
+KHH (Cao Hùng), TPE (Đào Viên - Đài Bắc), HKG (Hồng Kông), MFM (Ma Cao)
+Tour Đài Loan thường bay open-jaw: vào KHH, ra TPE
+ASEAN
+BKK (Suvarnabhumi - Thái Lan), DMK (Don Mueang - Thái Lan), SIN (Changi - Singapore), KUL (Kuala Lumpur - Malaysia), CGK (Jakarta - Indonesia), DPS (Bali - Indonesia), MNL (Manila - Philippines), PNH (Phnom Penh - Campuchia), VTE (Viêng Chăn - Lào), RGN (Yangon - Myanmar)
+Bangkok: BKK phục vụ hãng truyền thống/quốc tế; DMK chủ yếu phục vụ hãng giá rẻ (hai sân bay cách xa nhau, phải kiểm tra kỹ để điều xe đón)
+Trung Đông & Nam Á
+DXB (Dubai), AUH (Abu Dhabi), KTM (Kathmandu - Nepal), DEL (New Delhi - Ấn Độ)
+Tour Dubai – Abu Dhabi dùng chặng EK393 SGN-DXB
+
+Phần III. Hộ chiếu (Passport) và Vùng đọc máy (MRZ)
+3.1. Các ký hiệu trên Hộ chiếu & Danh sách đoàn
+Ô / Viết tắt
+Tiếng Anh
+Ý nghĩa
+Loại (Type)
+P / D / S
+P = Phổ thông (Personal/Passport); D = Ngoại giao (Diplomatic); S = Công vụ (Service)
+Mã số (Code)
+VNM, AUS, USA, CHN, KOR
+Mã quốc gia 3 chữ cái theo chuẩn ISO 3166 / ICAO
+DOB
+Date of Birth
+Ngày sinh
+POB
+Place of Birth
+Nơi sinh
+DOI
+Date of Issue
+Ngày cấp
+DOE
+Date of Expiry
+Ngày hết hạn (nhiều nước yêu cầu còn hạn ít nhất 6 tháng)
+NAT / NAL
+Nationality
+Quốc tịch
+SEX
+F / M
+F = Nữ (Female); M = Nam (Male)
+
+3.2. Giải mã dòng thứ hai của vùng MRZ (B4825067<9VNM9112126F2012308221212409<<<<<76)
+MRZ gồm 2 dòng cuối trang hộ chiếu, mỗi dòng 44 ký tự để máy quét tự động tại quầy check-in và xuất nhập cảnh.
+
+Đoạn ký tự
+Ý nghĩa
+B4825067<
+Số hộ chiếu (dấu < lấp cho đủ 9 ký tự)
+9
+Số kiểm tra (check digit) của số hộ chiếu
+VNM
+Quốc tịch Việt Nam
+911212 + 6
+Ngày sinh dạng YYMMDD (12/12/1991) + số kiểm tra 6
+F
+Giới tính nữ (Female)
+201230 + 8
+Ngày hết hạn dạng YYMMDD (30/12/2020) + số kiểm tra 8
+221212409
+Số CMND / định danh cá nhân
+76
+Các số kiểm tra cuối dòng
+
+Phần IV. Visa (Thị thực)
+Phân biệt Hộ chiếu và Visa: Hộ chiếu do nước mình cấp chứng minh nhân thân và quốc tịch; Visa do nước đến cấp cho phép người nước ngoài nhập cảnh vào nước đó (có hộ chiếu mới xin được visa).
+4 tiêu chí phân loại Visa:
+Mục đích chuyến đi: Du lịch, công tác, du học, thăm thân nhân, lao động, ngoại giao.
+Số lần nhập cảnh: Một lần (Single), nhiều lần (Multiple).
+Hình thức cấp: Dán vào hộ chiếu, visa rời, visa đoàn, visa điện tử (e-Visa), visa tại cửa khẩu (VOA).
+Đối tượng: Cá nhân, đoàn, ngoại giao, công tác.
+Các tình huống Visa thực tế trong đề:
+Visa đoàn Trung Quốc: Cấp trên một danh sách chung, không dán vào từng hộ chiếu. Cả đoàn phải nhập cảnh và xuất cảnh cùng nhau theo đúng thứ tự trong danh sách, tuyệt đối không được tách đoàn hay ở lại riêng. Trưởng đoàn giữ bản gốc danh sách và hộ chiếu suốt chuyến đi.
+Port Visa Notification (Côn Minh): Thông báo chấp thuận visa đoàn nhận tại cửa khẩu (cho đoàn 8 người), hiệu lực 1 tháng kể từ ngày cấp, phải có dấu của cơ quan cấp visa và số phê duyệt. Khi đến sân bay Côn Minh, trưởng đoàn xuất trình thông báo kèm danh sách đoàn để nhận visa.
+Indian e-Visa: Multiple entries = nhập cảnh nhiều lần; Validity 365 days = hiệu lực 1 năm kể từ ngày cấp; Continuous stay should not exceed 90 days = mỗi lần ở không quá 90 ngày liên tục (yêu cầu mang bản in ETA, nhập cảnh qua cửa khẩu chỉ định, lấy sinh trắc học, không gia hạn hay đổi loại visa).
+Khách quốc tịch nước ngoài đi tour Trung Quốc cùng đoàn Việt: Không đi chung visa đoàn của người Việt được, phải tự xin visa Trung Quốc theo quốc tịch riêng; cần thêm visa nhập cảnh lại Việt Nam (55 USD ~ 1.270.000 đồng) trừ khi được miễn thị thực; phải báo đối tác vì giá land tour có thể khác.
+Hủy tour hoặc bị từ chối visa: Nếu khách tự hủy sau khi đã nộp visa thì mất toàn bộ phí visa cộng phí hủy tour theo số ngày báo trước. Nếu bị từ chối visa thì xử lý theo hợp đồng (thường phí visa không hoàn lại, các khoản dịch vụ chưa phát sinh được hoàn tùy chính sách công ty).
+Phần V. Hành lý xách tay và Hành lý ký gửi (Câu 40 – 50)
+5.1. Bảng quy định định mức & phân loại vật dụng hành lý
+Hạng mục
+Quy định chi tiết
+Lý do / Ngoại lệ cần nhớ
+Tiêu chuẩn miễn cước
+7 kg xách tay + 1 kiện 20 kg ký gửi
+Quá cân khách phải tự trả phí quá cước (excess baggage)
+Chất lỏng xách tay
+Mỗi chai/lọ tối đa 100 ml, đựng chung trong 1 túi nhựa trong suốt có khóa kéo, tổng dung tích tối đa 1 lít
+Chất lỏng vượt mức phải ký gửi. Ngoại lệ: Thuốc và sữa cho trẻ nhỏ được mang lượng hợp lý nhưng phải trình báo khi soi chiếu
+Pin sạc dự phòng
+Bắt buộc để trong hành lý xách tay, nghiêm cấm ký gửi. Trên 100 Wh cần hãng chấp thuận, trên 160 Wh bị cấm
+Pin lithium dễ cháy nổ trong khoang hàng không người phát hiện kịp. Bay nội địa Trung Quốc (từ 28/6/2025): Bắt buộc phải có dấu 3C (CCC) rõ nét; dấu CE châu Âu không thay thế được
+Giấy tờ, tiền, đồ giá trị, dễ vỡ
+Máy ảnh, laptop, trang sức, hộ chiếu, tiền mặt, thuốc thông dụng phải mang theo người (xách tay) hoặc gửi két an toàn lễ tân khách sạn
+Không để trong vali ký gửi vì dễ va đập, mất cắp và hãng bay chỉ bồi thường theo kg rất thấp so với giá trị thật
+Vật dụng cấm trong xách tay
+Dao, kéo, kim loại sắc nhọn, chất lỏng/gel trên 100 ml
+Phải để trong hành lý ký gửi (riêng bật lửa bị cấm)
+Cấm tuyệt đối trên máy bay
+Chất nổ, chất dễ cháy, bình gas, hóa chất độc hại, bật lửa
+Cấm cả xách tay lẫn ký gửi
+Cấm khi xuất nhập cảnh
+Thực phẩm tươi sống, trái cây, thịt, động vật sống, tài liệu mật
+Bị hải quan/kiểm dịch cửa khẩu tịch thu và phạt
+
+5.2. Xử lý 4 tình huống sự cố hành lý tại sân bay
+Vali ký gửi của khách nặng 24 kg (tiêu chuẩn 20 kg): Đề nghị khách chuyển bớt 4 kg sang hành lý xách tay (trong giới hạn 7 kg) hoặc san sang vali của người thân đi cùng (với vé tính theo cân). Nếu vẫn quá cân, khách mua thêm hành lý quá cước (excess baggage) tại quầy và tự chi trả.
+Chiều về khách mua nhiều trà, tơ lụa, ngọc nên quá cân: Nhắc khách từ trước buổi mua sắm về tiêu chuẩn hành lý chiều về; gợi ý cân vali tại khách sạn đêm cuối; với hàng dễ vỡ hoặc giá trị cao, nhắc mang xách tay và giữ hóa đơn; hàng trên 300 USD phải khai báo hải quan.
+Khi soi chiếu, khách bị giữ lại vì có chai nước hoa 150 ml và dao gọt trái cây trong xách tay:
+Xử lý: Nếu còn thời gian, khách quay lại quầy check-in để ký gửi món đồ; nếu không kịp, phải bỏ lại theo yêu cầu của an ninh.
+Phòng tránh: Phát bản "Những điều cần biết" trước chuyến đi và nhắc lại tại buổi họp đoàn ở sân bay về chất lỏng 100 ml và vật sắc nhọn.
+Đến nơi, khách báo mất vali ký gửi (Quy trình 5 bước):
+Bước 1: Đến quầy Hành lý thất lạc (Lost & Found) ngay tại sân bay, trước khi ra khỏi khu vực nhận hành lý.
+Bước 2: Lập biên bản bất thường về hành lý (PIR – Property Irregularity Report), xuất trình phiếu hành lý và vé.
+Bước 3: Để lại địa chỉ khách sạn và lịch trình để hãng giao trả vali.
+Bước 4: Hỗ trợ khách mua vật dụng thiết yếu và giữ hóa đơn để yêu cầu hãng bay hoặc bảo hiểm bồi thường (bảo hiểm du lịch có quyền lợi chậm trễ/mất hành lý).
+Bước 5: Báo cáo công ty.
+Phần VI. Bảng xác nhận dịch vụ của Land Tour (Câu 51 – 52)
+6.1. Sáu nội dung chính trong Bảng xác nhận dịch vụ Land Tour
+Thông tin chung về đoàn: Mã đoàn (Tour code), công ty gửi khách (Agent), người phụ trách (PIC), số lượng khách (21+1 T/L), quốc tịch khách, ngày đến – ngày về, trưởng đoàn (Tour Leader), bảng đón đoàn (Welcome board).
+Cơ cấu phòng và khách sạn: Loại phòng (TWN / DBL / TPL / SGL), tên khách sạn, địa chỉ, số điện thoại từng đêm (hoặc tương đương).
+Lịch trình chi tiết theo ngày: Thành phố, phương tiện (chuyến bay, tàu cao tốc, xe), điểm tham quan, bữa ăn (B/L/D) và tiêu chuẩn ăn.
+Nhân sự và phương tiện: Hướng dẫn viên địa phương, loại xe, số chỗ, giờ sử dụng xe, người liên lạc khẩn cấp.
+Điều khoản dịch vụ và giá: Bao gồm, không bao gồm, tiền tip, điểm mua sắm, chi phí tự túc, quà tặng.
+Ghi chú, điều kiện đặc biệt: Yêu cầu ăn uống (ăn chay), chính sách trẻ em và suất miễn phí (FOC), điều khoản thay đổi lịch trình, phụ thu, giải quyết khiếu nại, dấu xác nhận của land tour.
+6.2. Giải mã các ký hiệu viết tắt trong Land Tour
+Ký hiệu
+Ý nghĩa
+21+1 T/L
+21 khách cộng 1 trưởng đoàn (Tour Leader)
+15+1 FOC
+Cứ 15 khách trả tiền thì được miễn phí 1 suất (Free of Charge)
+11 Room + 2 Room
+11 phòng tiêu chuẩn cho khách và 2 phòng cho người tháp tùng (trưởng đoàn, hướng dẫn viên)
+B / L / D
+Bữa sáng (Breakfast) / trưa (Lunch) / tối (Dinner)
+4N3D
+4 ngày 3 đêm
+TWN / DBL / TPL / SGL
+Phòng 2 giường đơn (Twin) / 1 giường đôi (Double) / 3 người (Triple) / 1 người (Single)
+
+Phần VII. Tình huống Hải quan Xuất Nhập Cảnh (Câu 53)
+Tình huống: Khách mang 7.000 USD tiền mặt và một máy ảnh (mang từ Việt Nam đi hoặc mới mua ở nước ngoài). Tư vấn khi xuất cảnh và khi nhập cảnh lại:
+
+Thời điểm
+Đối với tiền mặt (7.000 USD)
+Đối với máy ảnh / Hàng giá trị cao
+1. Khi xuất cảnh (Rời Việt Nam)
+Định mức miễn khai báo là tối đa 5.000 USD (hoặc ngoại tệ tương đương) và 15.000.000 đồng. Khách mang 7.000 USD (vượt mức) phải: (1) Khai báo hải quan bằng tờ khai xuất cảnh; (2) Xuất trình Giấy xác nhận mang ngoại tệ ra nước ngoài do ngân hàng cấp hoặc Tờ khai hải quan nhập cảnh lần trước (nếu số tiền này đã khai khi mang vào VN). Gợi ý tốt hơn: Chỉ mang tiền mặt ở mức cho phép (<=5.000 USD), phần còn lại dùng thẻ quốc tế. Nếu không khai báo sẽ bị tạm giữ tiền vượt mức, bị phạt và trễ chuyến bay.
+Máy ảnh mang từ Việt Nam đi: Hàng giá trị trên 300 USD (máy ảnh, laptop…) nên khai báo hải quan khi xuất cảnh, để khi về chứng minh được là đồ mang đi, không bị tính thuế như hàng mua mới ở nước ngoài.
+2. Khi nhập cảnh lại (Về Việt Nam)
+Nếu khi về vẫn mang tiền mặt trên 5.000 USD, khách phải khai báo hải quan khi nhập cảnh. Tờ khai này giúp khách mang số tiền đó ra nước ngoài hợp lệ ở chuyến đi sau.
+Máy ảnh mới mua ở nước ngoài: Hàng mua ở nước ngoài có tổng giá trị vượt mức miễn thuế (hiện khoảng 10 triệu đồng/người/lần) phải khai báo hải quan và nộp thuế phần vượt: (1) Giữ hóa đơn mua hàng; (2) Đi luồng khai báo (luồng đỏ), không đi luồng xanh; (3) Làm thủ tục hoàn thuế VAT tại sân bay nước ngoài trước khi về.
+
+
+Trách nhiệm của Hướng dẫn viên để phòng tránh:
+
+Nhắc quy định về tiền mặt và hàng giá trị trong buổi họp đoàn trước chuyến đi và tại sân bay.
+Trước giờ mua sắm, nhắc khách về thuế khi mang hàng giá trị cao về nước.
+Hỗ trợ khách điền tờ khai, nhưng tuyệt đối không mang hộ tiền hay hàng cho khách.
+Phần VIII. Họp đoàn và Tài liệu "Những điều cần biết" (Câu 54 – 64)
+8.1. Vai trò của tài liệu "Những điều cần biết"
+Với khách: Chuẩn bị chủ động, yên tâm, tra cứu khi cần.
+Với trưởng đoàn: Giảm câu hỏi lặp lại, phòng ngừa sự cố (quên giấy tờ, mang đồ cấm, trễ giờ).
+Với công ty: Thể hiện tính chuyên nghiệp và là bằng chứng đã thông báo cho khách khi có khiếu nại.
+8.2. Khung 10 phần bắt buộc của tài liệu "Những điều cần biết"
+Thứ tự phần
+Nội dung chính cần trình bày
+Câu hỏi mở rộng hay hỏi trong vấn đáp
+Mở đầu
+Bìa (logo, tên tài liệu, tên tour, mã đoàn, ngày đi – về) và thư chào mừng, giới thiệu trưởng đoàn
+
+
+1. Thông tin chung
+Tóm tắt lịch trình theo ngày, thông tin chuyến bay đi – về, giờ và địa điểm tập trung (trước 3 tiếng), dấu hiệu nhận biết trưởng đoàn (cờ, nón, bảng tên)
+Chuyến VN300 cất cánh 00:10 ngày 14/01 thì tập trung lúc mấy giờ? -> 21:00–21:10 tối ngày 13/01
+2. Giấy tờ cần mang
+Hộ chiếu gốc (còn hạn ít nhất 6 tháng, còn trang trống), visa hoặc bản in e-Visa, CCCD, bản sao/ảnh chụp hộ chiếu, bảo hiểm du lịch
+Tại sao phải để bản sao hộ chiếu tách riêng với bản gốc? -> Để khi mất bản gốc vẫn có thông tin làm giấy thông hành tại Đại sứ quán
+3. Hành lý
+Tiêu chuẩn 7 kg xách tay, 1 kiện 20 kg ký gửi; chất lỏng 100 ml (túi 1 lít); cấm dao kéo/bật lửa; pin dự phòng xách tay (dấu 3C nếu đi TQ); checklist đồ mang theo
+Mang sữa trẻ nhỏ và thuốc điều trị lên máy bay được không? -> Được mang lượng hợp lý nhưng phải trình báo khi soi chiếu
+4. Thủ tục sân bay & Hải quan
+Trình tự: Check-in, ký gửi -> Hải quan -> Xuất cảnh -> Soi chiếu an ninh -> Cửa lên máy bay. Quy định 5.000 USD / 15 triệu đồng, hàng mua về >10 triệu đồng; cấm mang thịt/trái cây tươi sống vào nước đến
+HDV có được cầm hộ tiền hay hàng hóa cho khách qua hải quan không? -> Tuyệt đối không
+5. Thông tin quốc gia đến
+Thủ đô, ngôn ngữ, tôn giáo, thời tiết & trang phục, chênh lệch giờ, tiền tệ & tỷ giá, điện áp & ổ cắm, SIM/Wi-Fi, ứng dụng nên cài
+Thông tin nào dễ thay đổi phải cập nhật trước mỗi đoàn? -> Tỷ giá, thời tiết, quy định visa, ứng dụng thanh toán
+6. Phong tục, pháp luật & Ứng xử
+Điều nên và không nên làm, quy định pháp luật dễ vi phạm (hút thuốc, xả rác, thuốc lá điện tử), văn hóa tiền tip
+Khách hút thuốc ở nơi cấm và bị nhắc nhở thì xử lý thế nào? -> Dập thuốc ngay, xin lỗi hợp tác, nộp phạt nếu có và nhắc lại toàn đoàn
+7. Ăn uống & Mua sắm
+Đặc trưng ẩm thực, báo trước nếu ăn chay/dị ứng/kiêng tôn giáo, nước máy uống được không; nơi mua sắm, hoàn thuế (Tax Refund), giữ hóa đơn và cân hành lý đêm cuối
+Khách mua nhiều trà, mỹ phẩm dạng lỏng thì dặn gì chiều về? -> Mỹ phẩm lỏng >100ml phải ký gửi, cân thử vali tránh quá cước, giữ hóa đơn
+8. An toàn & Quy định đoàn
+Đúng giờ, không tách đoàn (nhất là visa đoàn), giữ tài sản trong két sắt; hướng dẫn xử lý khi bị lạc đoàn
+Khi bị lạc đoàn khách phải làm gì? -> Đứng yên tại chỗ hoặc về điểm hẹn, gọi trưởng đoàn, đưa danh thiếp khách sạn cho cảnh sát/nhân viên địa phương, không đi theo người lạ
+9. Liên lạc khẩn cấp
+SĐT trưởng đoàn, HDV địa phương, hotline 24/7 công ty, Đại sứ quán/Lãnh sự quán Việt Nam tại nước đến, số cảnh sát/cấp cứu, bảo hiểm
+Khách mất hộ chiếu ở nước ngoài cần liên hệ nơi nào? -> Báo cảnh sát địa phương lấy xác nhận mất, sau đó đến Đại sứ quán/Lãnh sự quán Việt Nam xin cấp giấy thông hành
+10. Phụ lục
+Danh sách khách sạn bằng tiếng địa phương, câu giao tiếp thông dụng, điều kiện hủy tour, phiếu góp ý
+Vì sao danh sách khách sạn phải ghi bằng tiếng địa phương? -> Để khách đưa cho tài xế taxi hoặc cảnh sát khi bị lạc vì nhiều nơi người dân không đọc được tiếng Anh
+
+8.3. Bảng so sánh nhanh 5 quốc gia (Dùng cho Câu 59, 60, 64)
+Quốc gia
+Múi giờ (so với VN)
+Điện áp & Ổ cắm
+Lưu ý văn hóa, Pháp luật, Tip & Thời tiết (Câu 64)
+Hàn Quốc (Câu 64: Tour Seoul - Nami - Everland 5N4Đ tháng 12)
+ Nhanh hơn 1 giờ
+220V, ổ cắm chân tròn
+Tháng 12 rất lạnh, có tuyết -> chuẩn bị áo khoác dày, găng tay, mũ, giày chống trơn. Tiền Won (KRW). Không cắm đũa thẳng vào bát cơm; nhà hàng không có văn hóa tip (chỉ tip cho HDV & tài xế theo tour); cấm mang thịt/trái cây tươi sống.
+Nhật Bản
+ Nhanh hơn 2 giờ
+100V, ổ cắm chân dẹt
+Tiền Yên (JPY). Không cắm đũa thẳng vào bát cơm; giữ yên lặng trên tàu điện; xếp hàng và đứng đúng bên trên thang cuốn; nhà hàng không nhận tiền tip; nước máy thường uống được.
+Trung Quốc
+ Nhanh hơn 1 giờ
+220V (chân dẹt/ba chấu)
+Hạn chế Google, Facebook (cần SIM roaming/VPN); thanh toán phổ biến bằng ví điện tử (WeChat Pay, Alipay); pin sạc dự phòng bắt buộc có dấu 3C; đi visa đoàn tuyệt đối không tách đoàn; có thể mặc cả khi mua sắm ở chợ.
+Thái Lan
+ Cùng giờ với VN
+220V
+Trang phục kín đáo khi vào đền chùa; không chạm vào đầu người khác; nghiêm cấm xúc phạm Hoàng gia; cấm thuốc lá điện tử; nên uống nước đóng chai; có thể mặc cả ở chợ.
+Singapore
+ Nhanh hơn 1 giờ
+230V (chân ba chấu vuông)
+Luật phạt rất nặng hành vi xả rác, hút thuốc nơi công cộng, cấm nhập khẩu/nhai kẹo cao su, cấm thuốc lá điện tử.
+
+

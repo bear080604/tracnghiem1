@@ -1104,92 +1104,12 @@ nav.tab-bar {
   <div id="v"></div>
 </div>
 
+<script src="data.js"></script>
 <script>
 /* ==========================================================================
-   ORIGINAL DATA PRESERVED 100% UNCHANGED
+   APP LOGIC - Sử dụng dữ liệu từ data.js
    ========================================================================== */
-const CARDS=[
-["VN300 Y TU14JAN SGNNRT HK15 0010 0745","VN300: Vietnam Airlines, chuyến 300\nY: phổ thông giá đầy đủ\nTU14JAN: Thứ Ba 14/1\nSGN→NRT: Tân Sơn Nhất → Narita\nHK15: 15 chỗ đã xác nhận\n00:10 đi (giờ VN), 07:45 đến (giờ Tokyo)\nBay 5h35"],
-["SSR DOCS … P/VNM/số HC/VNM/15MAR58/M/20AUG32/TRAN/VAN BINH","P: hộ chiếu · VNM: nước cấp · số HC · VNM: quốc tịch · ngày sinh 15/03/1958 · M: nam · hết hạn 20/08/2032 · họ/tên\nDOCS: gửi trước thông tin hộ chiếu cho hãng. Phải khớp tuyệt đối từng ký tự"],
-["3U8254 SJWCTU 2240 0110+1","3U: Sichuan Airlines\nSJW Thạch Gia Trang → CTU Thành Đô\nĐi 22:40, đến 01:10 ngày hôm sau (+1)"],
-["TW122 SGN-ICN, Thu 14-Mar, bay 01:30. Có mặt khi nào?","22:30 ngày 13/03 (trước 3 giờ, tối ngày hôm trước)"],
-["EK393 SGN-DXB: 23:55 → 04:00 giờ Dubai (chậm hơn VN 3 giờ). Bay bao lâu?","04:00 + 3h = 07:00 giờ VN\n07:00 − 23:55 = 7h05"],
-["Chênh lệch múi giờ so với VN","Nhật, Hàn +2 · Trung Quốc, Singapore, Đài Loan +1 · Thái Lan 0 · Dubai −3"],
-["Cách tính thời gian bay","Đổi giờ đến về giờ VN, rồi trừ giờ đi. Giờ trên vé là giờ địa phương"],
-["Giờ có mặt chuyến quốc tế","Trước 2–3 giờ (đoàn đông: 3 giờ). Bay sau 0h thì tập trung tối hôm trước"],
-["HK / RR / HL / UN","HK: đã xác nhận · RR: tái xác nhận · HL: danh sách chờ · UN: hãng không có chỗ\nChỉ giao vé khi HK hoặc RR"],
-["PNR là gì?","Mã đặt chỗ, thường 6 ký tự (ví dụ NW4WSJ), dùng chung cho cả booking"],
-["3 số đầu của số vé (13 số)","Mã hãng phát hành vé: 784 China Southern, 738 Vietnam Airlines"],
-["WCHR / WCHS / WCHC","WCHR: đi bộ xa khó, tự lên xuống thang\nWCHS: không tự lên xuống thang\nWCHC: không tự di chuyển"],
-["Open-jaw","Vào một thành phố, ra từ thành phố khác (vào PEK, về từ PVG; vào KHH, về từ TPE)"],
-["+1 sau giờ đến","Hạ cánh ngày hôm sau"],
-["IATA và ICAO","IATA: 3 chữ (SGN), dùng đặt vé. ICAO: 4 chữ (VVTS), dùng điều hành bay"],
-["SGN · HAN · DAD · CXR · PQC","Tân Sơn Nhất (TP.HCM) · Nội Bài (Hà Nội) · Đà Nẵng · Cam Ranh (Nha Trang) · Phú Quốc"],
-["PEK · PKX · PVG · SHA","Bắc Kinh Thủ Đô · Bắc Kinh Đại Hưng · Thượng Hải Phố Đông (quốc tế) · Thượng Hải Hồng Kiều (nội địa)"],
-["CTU · SJW · HGH · KMG · NKG · TEN","Thành Đô · Thạch Gia Trang · Hàng Châu · Côn Minh · Nam Kinh · Đồng Nhân"],
-["ICN · GMP · PUS · CJU","Incheon · Gimpo (Seoul) · Busan · Jeju"],
-["NRT · HND · KIX","Narita · Haneda (Tokyo) · Kansai (Osaka)"],
-["KHH · TPE","Cao Hùng · Đào Viên (Đài Bắc)"],
-["BKK · DMK · SIN · KUL","Suvarnabhumi · Don Mueang (Bangkok) · Changi (Singapore) · Kuala Lumpur"],
-["DXB · HKG · MFM","Dubai · Hồng Kông · Ma Cao"],
-["Loại hộ chiếu P / D / S","P: phổ thông · D: ngoại giao · S: công vụ"],
-["DOB · POB · DOI · DOE","Ngày sinh · nơi sinh · ngày cấp · ngày hết hạn"],
-["MRZ","Vùng đọc máy cuối trang hộ chiếu: 2 dòng, mỗi dòng 44 ký tự"],
-["Hộ chiếu cần còn hạn bao lâu?","Ít nhất 6 tháng, còn trang trống"],
-["Visa khác hộ chiếu thế nào?","Hộ chiếu do nước mình cấp. Visa do nước đến cấp để cho nhập cảnh"],
-["Phân loại visa (bản thầy sửa)","Mục đích: du lịch, công tác, du học, thăm thân nhân\nSố lần: Single, Multiple\nHình thức cấp: dán, rời, đoàn, e-visa, cấp tại cửa khẩu\nĐối tượng: cá nhân, đoàn, ngoại giao, công tác"],
-["Visa đoàn Trung Quốc","Cấp trên danh sách chung, cả đoàn nhập xuất cảnh cùng nhau, không tách đoàn"],
-["Port Visa Notification","Thông báo visa đoàn nhận tại cửa khẩu, hiệu lực 1 tháng, có dấu và số phê duyệt"],
-["Indian e-Visa: Multiple, 365 days, ≤ 90 days","Nhập nhiều lần · hiệu lực 1 năm · mỗi lần ở tối đa 90 ngày liên tục"],
-["Hành lý tiêu chuẩn","7 kg xách tay + 20 kg ký gửi"],
-["Chất lỏng xách tay quốc tế","Mỗi chai ≤ 100 ml, đựng chung túi trong suốt có khóa, tổng khoảng 1 lít"],
-["Pin sạc dự phòng","Chỉ xách tay, cấm ký gửi. Trên 100 Wh cần hãng đồng ý, trên 160 Wh bị cấm"],
-["Bay nội địa Trung Quốc, pin sạc","Cần dấu 3C (CCC). Dấu CE không thay thế được"],
-["Tiền mặt không phải khai báo","5.000 USD và 15.000.000 đồng mỗi người. Vượt thì khai báo, kèm giấy xác nhận ngân hàng hoặc tờ khai lần trước"],
-["Hàng trên 300 USD (máy ảnh, laptop)","Khai báo khi xuất cảnh để khi về chứng minh là đồ mang đi"],
-["Hàng mua nước ngoài vượt mức miễn thuế (khoảng 10 triệu)","Khai báo, nộp thuế phần vượt, giữ hóa đơn, đi luồng đỏ"],
-["Mất vali ký gửi","Báo quầy Lost & Found tại sân bay, lập PIR, để lại địa chỉ khách sạn, giữ hóa đơn đồ mua tạm, báo công ty"],
-["FOC · T/L · TWN · DBL","Miễn phí 1 suất · trưởng đoàn · 2 giường đơn · 1 giường đôi"],
-["Khách bị lạc đoàn","Đứng yên hoặc về điểm hẹn, gọi trưởng đoàn, đưa danh thiếp khách sạn cho cảnh sát hoặc người địa phương"]
-];
-
-const QS=[
-["HK trên vé nghĩa là gì?",["Danh sách chờ","Chỗ đã xác nhận","Hãng không có chỗ","Đã hủy"],1],
-["Mã nào là hãng không thể cung cấp chỗ?",["HK","RR","HL","UN"],3],
-["Chỉ giao vé cho đoàn khi trạng thái là:",["HL hoặc UN","HK hoặc RR","HL hoặc RR","Bất kỳ"],1],
-["Ba số đầu của số vé là:",["Số chuyến bay","Mã hãng phát hành vé","Mã đặt chỗ","Mã sân bay"],1],
-["Hạng đặt chỗ Y là:",["Thương gia","Phổ thông giá đầy đủ","Hạng nhất","Vé trẻ em"],1],
-["Dấu +1 sau giờ đến nghĩa là:",["Trễ 1 giờ","Đến ngày hôm sau","Thêm 1 khách","Nối chuyến"],1],
-["Mã ICAO của sân bay gồm:",["2 ký tự","3 ký tự","4 ký tự","6 ký tự"],2],
-["Nha Trang bay đến sân bay nào?",["NHA","CXR","DAD","HUI"],1],
-["PVG là:",["Hồng Kiều","Phố Đông","Đại Hưng","Thủ Đô"],1],
-["Tokyo có 2 sân bay là:",["NRT và KIX","NRT và HND","HND và KIX","NRT và ICN"],1],
-["Hộ chiếu loại D là:",["Phổ thông","Công vụ","Ngoại giao","Tạm thời"],2],
-["DOE trên hộ chiếu là:",["Ngày sinh","Ngày cấp","Ngày hết hạn","Nơi sinh"],2],
-["MRZ gồm:",["1 dòng 44 ký tự","2 dòng, mỗi dòng 44 ký tự","3 dòng 30 ký tự","2 dòng 20 ký tự"],1],
-["Visa do ai cấp?",["Nước mình","Nước đến","Hãng hàng không","Công ty du lịch"],1],
-["Visa đoàn Trung Quốc:",["Dán từng hộ chiếu","Cấp trên danh sách chung, cả đoàn đi cùng nhau","Khách tách đoàn tự do","Chỉ cho người nước ngoài"],1],
-["Port Visa Notification có hiệu lực:",["1 tuần","1 tháng","6 tháng","1 năm"],1],
-["Tiêu chuẩn hành lý trong tài liệu:",["5 + 15 kg","7 + 20 kg","10 + 23 kg","7 + 30 kg"],1],
-["Chất lỏng xách tay quốc tế mỗi chai tối đa:",["50 ml","100 ml","150 ml","500 ml"],1],
-["Pin sạc dự phòng phải để ở:",["Ký gửi","Xách tay","Cả hai đều được","Gửi riêng ở quầy"],1],
-["Pin trên mức nào bị cấm hoàn toàn?",["100 Wh","160 Wh","200 Wh","300 Wh"],1],
-["Tiền mặt không phải khai báo:",["3.000 USD","5.000 USD","7.000 USD","10.000 USD"],1],
-["Hàng trên bao nhiêu nên khai báo khi xuất cảnh?",["100 USD","300 USD","1.000 USD","5.000 USD"],1],
-["Hàng mua nước ngoài vượt mức miễn thuế thì đi:",["Luồng xanh","Luồng đỏ","Luồng nào cũng được","Cửa quá cảnh"],1],
-["Mất vali ký gửi, biên bản lập là:",["PNR","PIR","SSR","FOC"],1],
-["Chuyến bay 01:40 ngày 23/11, khách tập trung lúc:",["01:00 ngày 23/11","22:30 ngày 22/11","06:00 ngày 23/11","00:00 ngày 22/11"],1],
-["WCHC dành cho khách:",["Đi bộ xa khó","Không tự lên xuống thang","Hoàn toàn không tự di chuyển","Đi cùng trẻ nhỏ"],2]
-];
-
-const TZ=[
-  ["Tokyo (NRT)", 2],
-  ["Seoul (ICN)", 2],
-  ["Bắc Kinh (PEK)", 1],
-  ["Singapore (SIN)", 1],
-  ["Đài Bắc (TPE)", 1],
-  ["Dubai (DXB)", -3]
-];
+// Data đã được tách ra file data.js
 
 /* ==========================================================================
    STATE & UTILS
@@ -1756,8 +1676,35 @@ function calc() {
 
       <!-- Flight Time Calculation Input -->
       <h3 style="font-size:15px;font-weight:700;margin-bottom:6px;">1. Tính thời gian bay thực tế:</h3>
+      
+      <div style="background:var(--warning-bg);border-left:3px solid var(--warning);padding:10px 12px;border-radius:8px;margin-bottom:12px;">
+        <div style="font-size:13px;font-weight:700;color:var(--text-main);margin-bottom:4px;">💡 Phương pháp tính (3 bước):</div>
+        <div style="font-size:12.5px;color:var(--text-muted);line-height:1.5;">
+          <b>Bước 1:</b> Xác định múi giờ (${destCity} ${z[1] > 0 ? "nhanh hơn" : (z[1] < 0 ? "chậm hơn" : "cùng giờ với")} VN ${Math.abs(z[1])}h)<br>
+          <b>Bước 2:</b> Đổi giờ hạ cánh về giờ VN (${z[1] > 0 ? "trừ đi" : (z[1] < 0 ? "cộng thêm" : "giữ nguyên")} ${Math.abs(z[1])}h)<br>
+          <b>Bước 3:</b> Lấy [Giờ đến (VN)] − [Giờ khởi hành] = Thời gian bay
+        </div>
+      </div>
+      
+      <details style="margin-bottom:12px;background:var(--surface-hover);border:1px solid var(--border);padding:10px 12px;border-radius:8px;cursor:pointer;">
+        <summary style="font-size:13px;font-weight:700;color:var(--primary-light);user-select:none;">
+          📖 Xem ví dụ minh họa chi tiết
+        </summary>
+        <div style="font-size:12.5px;margin-top:8px;line-height:1.6;color:var(--text-muted);">
+          <b>Ví dụ:</b> SGN → Tokyo (NRT), khởi hành 23:55, hạ cánh 07:30 (giờ Tokyo)<br>
+          Tokyo nhanh hơn VN 2 giờ<br><br>
+          
+          <b>Bước 1:</b> Tokyo nhanh hơn VN 2h<br>
+          <b>Bước 2:</b> 07:30 (Tokyo) − 2h = <b>05:30 (giờ VN)</b><br>
+          <b>Bước 3:</b> 05:30 − 23:55 = ?<br>
+          → Qua ngày: (24:00 − 23:55) + 05:30 = 00:05 + 05:30 = <b>5h35 phút</b><br><br>
+          
+          💡 <b>Hoặc tính nhanh:</b> 05:30 + 24:00 − 23:55 = 29:30 − 23:55 = 5h35
+        </div>
+      </details>
+      
       <p style="font-size:13.5px;color:var(--text-muted);margin-bottom:10px;">
-        Đổi giờ đến về giờ Việt Nam, sau đó trừ đi giờ cất cánh để tìm tổng thời gian bay:
+        <b>⚠️ Lưu ý quan trọng:</b> Giờ trên vé luôn là giờ <u>địa phương</u> của từng sân bay. Phải đổi về cùng múi giờ trước khi trừ!
       </p>
 
       <div class="calc-inputs-row">
@@ -1786,9 +1733,14 @@ function calc() {
 
       <!-- Gathering Time Rule Section -->
       <h3 style="font-size:15px;font-weight:700;margin-bottom:6px;">2. Nghiệp vụ giờ tập trung đoàn tại sân bay:</h3>
-      <p style="font-size:13.5px;color:var(--text-muted);line-height:1.45;">
-        Chuyến bay cất cánh lúc <b>${hm(dep)}</b> ngày <b>${dep < 180 ? "15/03" : "14/03"}</b>. Đoàn đông quốc tế cần tập trung trước <b>3 giờ</b>.
-      </p>
+      
+      <div style="background:var(--surface-hover);border:1px solid var(--border);padding:10px 12px;border-radius:8px;margin-bottom:10px;">
+        <div style="font-size:13px;color:var(--text-main);line-height:1.5;">
+          <b>📋 Đề bài:</b> Chuyến bay cất cánh lúc <b style="color:var(--primary-light);">${hm(dep)}</b> ngày <b>${dep < 180 ? "15/03" : "14/03"}</b>.<br>
+          <b>Đoàn:</b> 20 khách (đoàn đông) · <b>Loại:</b> Quốc tế<br>
+          <b>Yêu cầu:</b> Tính giờ tập trung theo quy định trước <b>3 giờ</b>
+        </div>
+      </div>
       
       <div style="margin-top:10px;">
         <button class="btn" id="sh" style="width:100%;">
@@ -1806,29 +1758,64 @@ function calc() {
     const durMins = dur % 60;
     
     const arrVNModulo = ((arrVN % 1440) + 1440) % 1440;
-    const formulaStep1 = `Giờ đến quy về giờ VN = ${hm(arrLocal)} ${z[1] > 0 ? "− " + z[1] + "h" : "+ " + Math.abs(z[1]) + "h"} = <b>${hm(arrVNModulo)}</b>`;
-    const formulaStep2 = `Thời gian bay = Giờ đến (VN) − Giờ đi (${hm(dep)}) = <b>${durHours} giờ ${durMins > 0 ? durMins + ' phút' : ''}</b>`;
+    
+    // Tạo giải thích chi tiết từng bước
+    const step1_title = `<b>Bước 1: Xác định múi giờ</b>`;
+    const step1_content = `${destCity} ${z[1] > 0 ? `nhanh hơn VN <b>${z[1]} giờ</b>` : (z[1] < 0 ? `chậm hơn VN <b>${Math.abs(z[1])} giờ</b>` : `cùng giờ với VN`)}`;
+    
+    const step2_title = `<b>Bước 2: Đổi giờ hạ cánh về giờ VN</b>`;
+    const step2_explain = z[1] > 0 
+      ? `Vì ${destCity} nhanh hơn, nên giờ VN sẽ <u>chậm hơn</u> → phải <b>TRỪ ĐI</b> ${z[1]}h`
+      : (z[1] < 0 
+        ? `Vì ${destCity} chậm hơn, nên giờ VN sẽ <u>nhanh hơn</u> → phải <b>CỘNG THÊM</b> ${Math.abs(z[1])}h`
+        : `Cùng múi giờ → giữ nguyên`);
+    const step2_calc = `${hm(arrLocal)} ${z[1] > 0 ? "− " + z[1] + "h" : (z[1] < 0 ? "+ " + Math.abs(z[1]) + "h" : "")} = <b style="color:var(--primary-light);">${hm(arrVNModulo)} (giờ VN)</b>`;
+    
+    const step3_title = `<b>Bước 3: Tính thời gian bay</b>`;
+    const step3_calc = `${hm(arrVNModulo)} (giờ đến VN) − ${hm(dep)} (giờ đi) = <b style="color:var(--success);">${durHours}h${durMins > 0 ? ' ' + durMins + 'phút' : ''}</b>`;
 
     if (t === dur) {
       playSound('correct');
       $("#f").innerHTML = `
         <div class="quiz-feedback correct">
-          <div>
-            <div style="font-size:14.5px;font-weight:700;">✅ Chính xác tuyệt đối!</div>
-            <div style="font-size:12.5px;margin-top:4px;">${formulaStep1}<br>${formulaStep2}</div>
+          <div style="width:100%;">
+            <div style="font-size:15px;font-weight:700;margin-bottom:8px;">✅ Chính xác tuyệt đối!</div>
+            <div style="font-size:13px;line-height:1.6;background:var(--surface-hover);padding:12px;border-radius:8px;">
+              ${step1_title}<br>
+              → ${step1_content}<br><br>
+              ${step2_title}<br>
+              → ${step2_explain}<br>
+              → ${step2_calc}<br><br>
+              ${step3_title}<br>
+              → ${step3_calc}
+            </div>
           </div>
         </div>
       `;
     } else {
       playSound('wrong');
+      const userHours = Math.floor(t / 60);
+      const userMins = t % 60;
       $("#f").innerHTML = `
         <div class="quiz-feedback incorrect">
-          <div>
-            <div style="font-size:14.5px;font-weight:700;">❌ Chưa chính xác. Đáp án: ${durHours} giờ ${durMins} phút</div>
-            <div style="font-size:12.5px;margin-top:4px;">
-              <b>Cách giải:</b><br>
-              • ${formulaStep1}<br>
-              • ${formulaStep2}
+          <div style="width:100%;">
+            <div style="font-size:15px;font-weight:700;margin-bottom:4px;">❌ Chưa chính xác</div>
+            <div style="font-size:13px;margin-bottom:8px;">
+              Bạn trả lời: <b>${userHours}h${userMins > 0 ? ' ' + userMins + 'phút' : ''}</b> · 
+              Đáp án đúng: <b style="color:var(--danger);">${durHours}h${durMins > 0 ? ' ' + durMins + 'phút' : ''}</b>
+            </div>
+            <div style="font-size:13px;line-height:1.6;background:var(--surface-hover);padding:12px;border-radius:8px;">
+              <b>📚 Giải thích chi tiết:</b><br><br>
+              ${step1_title}<br>
+              → ${step1_content}<br><br>
+              ${step2_title}<br>
+              → ${step2_explain}<br>
+              → ${step2_calc}<br><br>
+              ${step3_title}<br>
+              → ${step3_calc}
+            </div>
+            <div style="font-size:12px;margin-top:8px;color:var(--text-sub);">
+              💡 <b>Mẹo nhớ:</b> Nước đến nhanh hơn thì TRỪ, chậm hơn thì CỘNG để về giờ VN!
             </div>
           </div>
         </div>
@@ -1839,20 +1826,51 @@ function calc() {
   $("#nw").onclick = calc;
 
   $("#sh").onclick = () => {
-    const c = dep - 180;
+    const c = dep - 180; // Trừ 3 giờ (180 phút)
     const isNightBefore = c < 0;
+    const gatheringTime = ((c % 1440) + 1440) % 1440; // Xử lý số âm
     const gatheringDate = isNightBefore ? (dep < 180 ? "14/03" : "13/03") : (dep < 180 ? "15/03" : "14/03");
+    
+    // Giải thích chi tiết
+    const explanation = isNightBefore 
+      ? `
+        <b>Tại sao phải tập trung tối hôm trước?</b><br>
+        • Giờ bay: ${hm(dep)} (sau 00:00 = rạng sáng)<br>
+        • Trừ 3 giờ: ${hm(dep)} − 3h = ${hm(gatheringTime)}<br>
+        • ${hm(gatheringTime)} < 00:00 → Phải lùi về <b>tối hôm trước</b>!<br><br>
+        <b style="color:var(--warning);">⚠️ Lưu ý:</b> Chuyến bay sau 00:00 (rạng sáng) = bay "ngày mai" nhưng tập trung "tối hôm nay"!
+      `
+      : `
+        <b>Cách tính:</b><br>
+        • Giờ bay: ${hm(dep)}<br>
+        • Trừ 3 giờ: ${hm(dep)} − 3h = ${hm(gatheringTime)}<br>
+        • Cùng ngày ${gatheringDate} vì giờ tập trung vẫn trong ngày hôm đó.
+      `;
     
     $("#g").innerHTML = `
       <div class="quiz-feedback correct" style="background:var(--primary-bg);border-color:rgba(99,102,241,0.3);color:var(--text-main);">
-        <div>
-          <div style="font-size:14.5px;font-weight:700;color:var(--primary-light);">
-            📍 Giờ có mặt: ${hm(c)} ngày ${gatheringDate} ${isNightBefore ? "(Tối hôm trước!)" : ""}
+        <div style="width:100%;">
+          <div style="font-size:15px;font-weight:700;color:var(--primary-light);margin-bottom:8px;">
+            📍 Giờ có mặt: <span style="color:var(--success);">${hm(gatheringTime)}</span> ngày <span style="color:var(--success);">${gatheringDate}</span>
+            ${isNightBefore ? '<span style="color:var(--warning);"> (Tối hôm trước!)</span>' : ''}
           </div>
-          <div style="font-size:12.5px;margin-top:6px;line-height:1.45;color:var(--text-muted);">
-            <b>Quy tắc nghiệp vụ:</b><br>
-            • Chuyến bay quốc tế: tập trung trước <b>2–3 giờ</b> (đoàn đông: trước <b>3 giờ</b>).<br>
-            • ${dep < 180 ? "<b>Lưu ý quan trọng:</b> Chuyến bay sau 00:00 (rạng sáng), HDV và khách phải tập trung từ <b>tối hôm trước</b> để không bị trễ chuyến!" : "Khách tập trung cùng ngày trước 3 tiếng."}
+          
+          <div style="background:var(--surface-hover);padding:10px;border-radius:8px;margin-bottom:10px;font-size:13px;line-height:1.6;">
+            ${explanation}
+          </div>
+
+          <div style="font-size:13px;line-height:1.5;border-top:1px solid var(--border);padding-top:10px;">
+            <b>📋 Quy tắc nghiệp vụ chung:</b><br>
+            • <b>Bay quốc tế:</b> Tập trung trước 2–3 giờ<br>
+            • <b>Đoàn đông (>15 người):</b> Tập trung trước <b>3 giờ</b> để có thời gian:<br>
+            &nbsp;&nbsp;→ Điểm danh, phát tài liệu<br>
+            &nbsp;&nbsp;→ Check-in, ký gửi hành lý<br>
+            &nbsp;&nbsp;→ Hải quan, xuất cảnh, soi chiếu an ninh<br>
+            • <b>Chuyến sau 0h:</b> Luôn tập trung <b>tối hôm trước</b>
+          </div>
+          
+          <div style="margin-top:10px;padding:8px;background:var(--warning-bg);border-radius:6px;font-size:12px;">
+            💡 <b>Mẹo nhớ:</b> Thấy giờ bay có số 00, 01, 02 → Tập trung tối hôm trước!
           </div>
         </div>
       </div>
