@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Ôn thi: Vé máy bay – Xuất nhập cảnh – Hải quan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Dark theme (default) */
+  --bg-base: #090d16;
+  --bg-gradient: radial-gradient(ellipse at 50% -20%, #1e1b4b 0%, #0a0e1a 60%, #05070c 100%);
+  --surface: rgba(18, 24, 38, 0.88);
+  --surface-solid: #131a29;
+  --surface-hover: rgba(30, 41, 59, 0.85);
+  --surface-elevated: #1a2336;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --border-focus: #6366f1;
+  
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-sub: #64748b;
+  
+  --primary: #6366f1;
+  --primary-glow: rgba(99, 102, 241, 0.35);
+  --primary-light: #818cf8;
+  --primary-dark: #4f46e5;
+  --primary-bg: rgba(99, 102, 241, 0.12);
+  
+  --success: #10b981;
+  --success-glow: rgba(16, 185, 129, 0.35);
+  --success-bg: rgba(16, 185, 129, 0.12);
+  --success-border: rgba(16, 185, 129, 0.3);
+  
+  --danger: #f43f5e;
+  --danger-glow: rgba(244, 63, 94, 0.35);
+  --danger-bg: rgba(244, 63, 94, 0.12);
+  --danger-border: rgba(244, 63, 94, 0.3);
+  
+  --warning: #f59e0b;
+  --warning-bg: rgba(245, 158, 11, 0.12);
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.4), 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 16px 36px -6px rgba(0, 0, 0, 0.5), 0 8px 16px -4px rgba(0, 0, 0, 0.35);
+  
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 26px;
+}
+
+[data-theme="light"] {
+  --bg-base: #f8fafc;
+  --bg-gradient: radial-gradient(ellipse at 50% -20%, #e0e7ff 0%, #f1f5f9 60%, #f8fafc 100%);
+  --surface: rgba(255, 255, 255, 0.94);
+  --surface-solid: #ffffff;
+  --surface-hover: #f1f5f9;
+  --surface-elevated: #ffffff;
+  --border: rgba(148, 163, 184, 0.22);
+  --border-strong: rgba(148, 163, 184, 0.38);
+  --border-focus: #4f46e5;
+  
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-sub: #64748b;
+  
+  --primary: #4f46e5;
+  --primary-glow: rgba(79, 70, 229, 0.25);
+  --primary-light: #6366f1;
+  --primary-dark: #4338ca;
+  --primary-bg: rgba(79, 70, 229, 0.08);
+  
+  --success: #059669;
+  --success-glow: rgba(5, 150, 105, 0.25);
+  --success-bg: rgba(5, 150, 105, 0.08);
+  --success-border: rgba(5, 150, 105, 0.25);
+  
+  --danger: #e11d48;
+  --danger-glow: rgba(225, 29, 72, 0.25);
+  --danger-bg: rgba(225, 29, 72, 0.08);
+  --danger-border: rgba(225, 29, 72, 0.25);
+  
+  --warning: #d97706;
+  --warning-bg: rgba(217, 119, 6, 0.1);
+  
+  --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 20px 30px -10px rgba(15, 23, 42, 0.12), 0 10px 15px -5px rgba(15, 23, 42, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  background: var(--bg-base);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  font-family: var(--font-main);
+  font-size: 15px;
+  line-height: 1.5;
+  padding: max(env(safe-area-inset-top), 10px) 12px max(env(safe-area-inset-bottom), 18px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* App Wrapper */
+.app-container {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+header {
+  background: var(--surface);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 12px 16px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary) 0%, #a855f7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 4px 12px var(--primary-glow);
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.brand-text {
+  min-width: 0;
+}
+
+.brand-text h1 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.brand-text p {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface-hover);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-btn:hover {
+  background: var(--surface-solid);
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.icon-btn:active {
+  transform: scale(0.92);
+}
+
+/* Navigation Tab Bar */
+nav.tab-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  background: var(--surface);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  padding: 4px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.tab-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 8px 2px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+}
+
+.tab-btn .tab-icon {
+  font-size: 17px;
+  line-height: 1;
+}
+
+.tab-btn:hover {
+  color: var(--text-main);
+  background: var(--surface-hover);
+}
+
+.tab-btn.active {
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 4px 12px var(--primary-glow);
+}
+
+/* Main Content Area */
+#v {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Card Box */
+.card-box {
+  background: var(--surface);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 16px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: visible;
+  transition: border-color 0.2s ease;
+}
+
+/* Utility Elements */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 20px;
+  background: var(--primary-bg);
+  color: var(--primary-light);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+}
+
+.badge.success {
+  background: var(--success-bg);
+  color: var(--success);
+  border-color: var(--success-border);
+}
+
+.progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.progress-track {
+  width: 100%;
+  height: 6px;
+  background: var(--surface-hover);
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+  border-radius: 99px;
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 8px var(--primary-glow);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 11px 16px;
+  min-height: 44px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-strong);
+  background: var(--surface-hover);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:hover {
+  background: var(--surface-solid);
+  border-color: var(--border-focus);
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 4px 14px var(--primary-glow);
+}
+
+.btn.success {
+  background: linear-gradient(135deg, var(--success) 0%, #047857 100%);
+  color: #ffffff;
+  border-color: var(--success);
+  box-shadow: 0 4px 14px var(--success-glow);
+}
+
+.btn.danger {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border-color: var(--danger-border);
+}
+
+.btn.danger:hover {
+  background: var(--danger);
+  color: #fff;
+}
+
+.btn-group {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.btn-group > * {
+  flex: 1;
+}
+
+/* ==========================================================================
+   3D FLASHCARD (SOLVED AUTO-HEIGHT & ZERO CLIPPING)
+   ========================================================================== */
+.flashcard-wrapper {
+  perspective: 1400px;
+  width: 100%;
+  margin-bottom: 14px;
+  user-select: none;
+  touch-action: pan-y;
+  cursor: pointer;
+}
+
+/* Use CSS Grid so the card container stretches to the maximum height of BOTH faces! */
+.flashcard-3d {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  min-height: 220px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.34, 1.25, 0.64, 1);
+  position: relative;
+}
+
+.flashcard-wrapper.flipped .flashcard-3d {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  width: 100%;
+  min-height: 100%;
+  border-radius: var(--radius-lg);
+  padding: 18px 16px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: var(--surface-solid);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.card-face::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), #a855f7);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.card-face.card-front {
+  transform: rotateY(0deg);
+  z-index: 2;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.card-face.card-back {
+  transform: rotateY(180deg);
+  background: var(--surface-elevated);
+  border-color: rgba(99, 102, 241, 0.35);
+  z-index: 1;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.card-face.card-back::before {
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+}
+
+/* Visibility toggling guarantees zero clipping and perfect click behavior across all browsers */
+.flashcard-wrapper.flipped .card-face.card-front {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.flashcard-wrapper.flipped .card-face.card-back {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.card-face-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.card-face-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6px 0;
+  width: 100%;
+  max-height: 60vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card-question {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+  word-break: break-word;
+}
+
+.card-question.code-font {
+  font-family: var(--font-mono);
+  font-size: 14.5px;
+  background: var(--surface-hover);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  letter-spacing: 0.02em;
+  word-break: break-word;
+  line-height: 1.5;
+  text-align: left;
+  width: 100%;
+}
+
+.card-answer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  width: 100%;
+}
+
+.answer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13.5px;
+  line-height: 1.45;
+  background: var(--surface-hover);
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  word-break: break-word;
+}
+
+.answer-item .dot {
+  color: var(--success);
+  font-size: 14px;
+  line-height: 1.2;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.card-face-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-sub);
+  margin-top: 10px;
+}
+
+.keyboard-hints {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--text-sub);
+  margin-top: 8px;
+  text-align: center;
+}
+
+.kbd {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--surface-hover);
+  border: 1px solid var(--border-strong);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+/* Quiz Styles */
+.quiz-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.quiz-score-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 30px;
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.quiz-title {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--text-main);
+  margin-top: 4px;
+  word-break: break-word;
+}
+
+.options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.quiz-opt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  padding: 12px 14px;
+  min-height: 48px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-strong);
+  background: var(--surface-hover);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  touch-action: manipulation;
+}
+
+.quiz-opt:hover:not(:disabled) {
+  background: var(--surface-solid);
+  border-color: var(--primary-light);
+}
+
+.quiz-opt:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.opt-prefix {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--surface-solid);
+  border: 1px solid var(--border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.quiz-opt.ok {
+  border-color: var(--success);
+  background: var(--success-bg);
+  color: var(--text-main);
+  box-shadow: 0 0 12px var(--success-glow);
+}
+
+.quiz-opt.ok .opt-prefix {
+  background: var(--success);
+  color: #fff;
+  border-color: var(--success);
+}
+
+.quiz-opt.no {
+  border-color: var(--danger);
+  background: var(--danger-bg);
+  color: var(--text-main);
+  animation: shake 0.4s ease;
+}
+
+.quiz-opt.no .opt-prefix {
+  background: var(--danger);
+  color: #fff;
+  border-color: var(--danger);
+}
+
+.quiz-opt:disabled {
+  cursor: default;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25%, 75% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+}
+
+.quiz-feedback {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 13.5px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.quiz-feedback.correct {
+  background: var(--success-bg);
+  border: 1px solid var(--success-border);
+  color: var(--success);
+}
+
+.quiz-feedback.incorrect {
+  background: var(--danger-bg);
+  border: 1px solid var(--danger-border);
+  color: var(--danger);
+}
+
+/* Boarding Pass (Flight Time & Gathering) */
+.boarding-pass {
+  background: var(--surface-solid);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.boarding-pass-header {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #312e81 100%);
+  color: #ffffff;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flight-number {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.boarding-pass-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.route-display {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.airport-block h2 {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: 0.05em;
+}
+
+.airport-block p {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.route-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.plane-line {
+  display: flex;
+  align-items: center;
+  width: 60px;
+}
+
+.plane-line::before, .plane-line::after {
+  content: '';
+  height: 2px;
+  background: var(--border-strong);
+  flex: 1;
+}
+
+.plane-icon {
+  font-size: 18px;
+  color: var(--primary-light);
+  padding: 0 4px;
+  transform: rotate(90deg);
+}
+
+.flight-times-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  background: var(--surface-hover);
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.time-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.time-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-sub);
+}
+
+.time-val {
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.tz-notice {
+  font-size: 12.5px;
+  padding: 8px 12px;
+  background: var(--primary-bg);
+  border-left: 3px solid var(--primary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--text-main);
+  line-height: 1.45;
+}
+
+/* Number Inputs (iOS zoom-prevented with font-size: 16px) */
+.calc-inputs-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.input-stepper {
+  display: flex;
+  align-items: center;
+  background: var(--surface-hover);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 2px 8px;
+  flex: 1;
+}
+
+.input-stepper input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px 4px;
+  outline: none;
+}
+
+.input-unit {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Quick Search Component */
+.search-bar-wrapper {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 36px 12px 38px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-strong);
+  background: var(--surface-hover);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: var(--primary);
+  background: var(--surface-solid);
+  box-shadow: 0 0 0 3px var(--primary-bg);
+}
+
+.search-icon-pos {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.search-clear-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background: var(--surface-solid);
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.ref-card-item {
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  margin-bottom: 8px;
+}
+
+.ref-title {
+  font-weight: 700;
+  font-size: 14.5px;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.ref-content {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  white-space: pre-line;
+  line-height: 1.45;
+}
+
+/* Celebration Screen */
+.celebrate-card {
+  text-align: center;
+  padding: 28px 16px;
+}
+
+.celebrate-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.celebrate-card h2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.celebrate-card p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 520px) {
+  body {
+    padding: max(env(safe-area-inset-top), 8px) 8px max(env(safe-area-inset-bottom), 14px);
+  }
+  .card-box {
+    padding: 14px 12px;
+    border-radius: 16px;
+  }
+  .card-face {
+    padding: 14px 12px;
+    border-radius: 16px;
+  }
+  .card-question {
+    font-size: 16px;
+  }
+  .card-question.code-font {
+    font-size: 13.5px;
+    padding: 10px 10px;
+  }
+  .answer-item {
+    padding: 6px 8px;
+    font-size: 13px;
+    gap: 6px;
+  }
+  .keyboard-hints .desktop-hint {
+    display: none;
+  }
+  .keyboard-hints .mobile-hint {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 521px) {
+  .keyboard-hints .desktop-hint {
+    display: inline-block;
+  }
+  .keyboard-hints .mobile-hint {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+<canvas id="confetti-canvas"></canvas>
+
+<div class="app-container">
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <div class="brand-icon">✈️</div>
+      <div class="brand-text">
+        <h1>Vé Máy Bay & Nghiệp Vụ XNC</h1>
+        <p>Hàng không · Hải quan · Hướng dẫn viên</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn" id="soundBtn" title="Bật/Tắt âm thanh">🔊</button>
+      <button class="icon-btn" id="themeBtn" title="Chuyển chế độ sáng/tối">🌙</button>
+    </div>
+  </header>
+
+  <!-- Segmented Tabs -->
+  <nav class="tab-bar">
+    <button class="tab-btn active" id="t0">
+      <span class="tab-icon">🗂️</span>
+      <span>Thẻ nhớ</span>
+    </button>
+    <button class="tab-btn" id="t1">
+      <span class="tab-icon">📝</span>
+      <span>Trắc nghiệm</span>
+    </button>
+    <button class="tab-btn" id="t2">
+      <span class="tab-icon">⏱️</span>
+      <span>Tính giờ bay</span>
+    </button>
+    <button class="tab-btn" id="t3">
+      <span class="tab-icon">🔍</span>
+      <span>Tra cứu</span>
+    </button>
+  </nav>
+
+  <!-- Dynamic Views Container -->
+  <div id="v"></div>
+</div>
+
+<script>
+/* ==========================================================================
+   ORIGINAL DATA PRESERVED 100% UNCHANGED
+   ========================================================================== */
+const CARDS=[
+["VN300 Y TU14JAN SGNNRT HK15 0010 0745","VN300: Vietnam Airlines, chuyến 300\nY: phổ thông giá đầy đủ\nTU14JAN: Thứ Ba 14/1\nSGN→NRT: Tân Sơn Nhất → Narita\nHK15: 15 chỗ đã xác nhận\n00:10 đi (giờ VN), 07:45 đến (giờ Tokyo)\nBay 5h35"],
+["SSR DOCS … P/VNM/số HC/VNM/15MAR58/M/20AUG32/TRAN/VAN BINH","P: hộ chiếu · VNM: nước cấp · số HC · VNM: quốc tịch · ngày sinh 15/03/1958 · M: nam · hết hạn 20/08/2032 · họ/tên\nDOCS: gửi trước thông tin hộ chiếu cho hãng. Phải khớp tuyệt đối từng ký tự"],
+["3U8254 SJWCTU 2240 0110+1","3U: Sichuan Airlines\nSJW Thạch Gia Trang → CTU Thành Đô\nĐi 22:40, đến 01:10 ngày hôm sau (+1)"],
+["TW122 SGN-ICN, Thu 14-Mar, bay 01:30. Có mặt khi nào?","22:30 ngày 13/03 (trước 3 giờ, tối ngày hôm trước)"],
+["EK393 SGN-DXB: 23:55 → 04:00 giờ Dubai (chậm hơn VN 3 giờ). Bay bao lâu?","04:00 + 3h = 07:00 giờ VN\n07:00 − 23:55 = 7h05"],
+["Chênh lệch múi giờ so với VN","Nhật, Hàn +2 · Trung Quốc, Singapore, Đài Loan +1 · Thái Lan 0 · Dubai −3"],
+["Cách tính thời gian bay","Đổi giờ đến về giờ VN, rồi trừ giờ đi. Giờ trên vé là giờ địa phương"],
+["Giờ có mặt chuyến quốc tế","Trước 2–3 giờ (đoàn đông: 3 giờ). Bay sau 0h thì tập trung tối hôm trước"],
+["HK / RR / HL / UN","HK: đã xác nhận · RR: tái xác nhận · HL: danh sách chờ · UN: hãng không có chỗ\nChỉ giao vé khi HK hoặc RR"],
+["PNR là gì?","Mã đặt chỗ, thường 6 ký tự (ví dụ NW4WSJ), dùng chung cho cả booking"],
+["3 số đầu của số vé (13 số)","Mã hãng phát hành vé: 784 China Southern, 738 Vietnam Airlines"],
+["WCHR / WCHS / WCHC","WCHR: đi bộ xa khó, tự lên xuống thang\nWCHS: không tự lên xuống thang\nWCHC: không tự di chuyển"],
+["Open-jaw","Vào một thành phố, ra từ thành phố khác (vào PEK, về từ PVG; vào KHH, về từ TPE)"],
+["+1 sau giờ đến","Hạ cánh ngày hôm sau"],
+["IATA và ICAO","IATA: 3 chữ (SGN), dùng đặt vé. ICAO: 4 chữ (VVTS), dùng điều hành bay"],
+["SGN · HAN · DAD · CXR · PQC","Tân Sơn Nhất (TP.HCM) · Nội Bài (Hà Nội) · Đà Nẵng · Cam Ranh (Nha Trang) · Phú Quốc"],
+["PEK · PKX · PVG · SHA","Bắc Kinh Thủ Đô · Bắc Kinh Đại Hưng · Thượng Hải Phố Đông (quốc tế) · Thượng Hải Hồng Kiều (nội địa)"],
+["CTU · SJW · HGH · KMG · NKG · TEN","Thành Đô · Thạch Gia Trang · Hàng Châu · Côn Minh · Nam Kinh · Đồng Nhân"],
+["ICN · GMP · PUS · CJU","Incheon · Gimpo (Seoul) · Busan · Jeju"],
+["NRT · HND · KIX","Narita · Haneda (Tokyo) · Kansai (Osaka)"],
+["KHH · TPE","Cao Hùng · Đào Viên (Đài Bắc)"],
+["BKK · DMK · SIN · KUL","Suvarnabhumi · Don Mueang (Bangkok) · Changi (Singapore) · Kuala Lumpur"],
+["DXB · HKG · MFM","Dubai · Hồng Kông · Ma Cao"],
+["Loại hộ chiếu P / D / S","P: phổ thông · D: ngoại giao · S: công vụ"],
+["DOB · POB · DOI · DOE","Ngày sinh · nơi sinh · ngày cấp · ngày hết hạn"],
+["MRZ","Vùng đọc máy cuối trang hộ chiếu: 2 dòng, mỗi dòng 44 ký tự"],
+["Hộ chiếu cần còn hạn bao lâu?","Ít nhất 6 tháng, còn trang trống"],
+["Visa khác hộ chiếu thế nào?","Hộ chiếu do nước mình cấp. Visa do nước đến cấp để cho nhập cảnh"],
+["Phân loại visa (bản thầy sửa)","Mục đích: du lịch, công tác, du học, thăm thân nhân\nSố lần: Single, Multiple\nHình thức cấp: dán, rời, đoàn, e-visa, cấp tại cửa khẩu\nĐối tượng: cá nhân, đoàn, ngoại giao, công tác"],
+["Visa đoàn Trung Quốc","Cấp trên danh sách chung, cả đoàn nhập xuất cảnh cùng nhau, không tách đoàn"],
+["Port Visa Notification","Thông báo visa đoàn nhận tại cửa khẩu, hiệu lực 1 tháng, có dấu và số phê duyệt"],
+["Indian e-Visa: Multiple, 365 days, ≤ 90 days","Nhập nhiều lần · hiệu lực 1 năm · mỗi lần ở tối đa 90 ngày liên tục"],
+["Hành lý tiêu chuẩn","7 kg xách tay + 20 kg ký gửi"],
+["Chất lỏng xách tay quốc tế","Mỗi chai ≤ 100 ml, đựng chung túi trong suốt có khóa, tổng khoảng 1 lít"],
+["Pin sạc dự phòng","Chỉ xách tay, cấm ký gửi. Trên 100 Wh cần hãng đồng ý, trên 160 Wh bị cấm"],
+["Bay nội địa Trung Quốc, pin sạc","Cần dấu 3C (CCC). Dấu CE không thay thế được"],
+["Tiền mặt không phải khai báo","5.000 USD và 15.000.000 đồng mỗi người. Vượt thì khai báo, kèm giấy xác nhận ngân hàng hoặc tờ khai lần trước"],
+["Hàng trên 300 USD (máy ảnh, laptop)","Khai báo khi xuất cảnh để khi về chứng minh là đồ mang đi"],
+["Hàng mua nước ngoài vượt mức miễn thuế (khoảng 10 triệu)","Khai báo, nộp thuế phần vượt, giữ hóa đơn, đi luồng đỏ"],
+["Mất vali ký gửi","Báo quầy Lost & Found tại sân bay, lập PIR, để lại địa chỉ khách sạn, giữ hóa đơn đồ mua tạm, báo công ty"],
+["FOC · T/L · TWN · DBL","Miễn phí 1 suất · trưởng đoàn · 2 giường đơn · 1 giường đôi"],
+["Khách bị lạc đoàn","Đứng yên hoặc về điểm hẹn, gọi trưởng đoàn, đưa danh thiếp khách sạn cho cảnh sát hoặc người địa phương"]
+];
+
+const QS=[
+["HK trên vé nghĩa là gì?",["Danh sách chờ","Chỗ đã xác nhận","Hãng không có chỗ","Đã hủy"],1],
+["Mã nào là hãng không thể cung cấp chỗ?",["HK","RR","HL","UN"],3],
+["Chỉ giao vé cho đoàn khi trạng thái là:",["HL hoặc UN","HK hoặc RR","HL hoặc RR","Bất kỳ"],1],
+["Ba số đầu của số vé là:",["Số chuyến bay","Mã hãng phát hành vé","Mã đặt chỗ","Mã sân bay"],1],
+["Hạng đặt chỗ Y là:",["Thương gia","Phổ thông giá đầy đủ","Hạng nhất","Vé trẻ em"],1],
+["Dấu +1 sau giờ đến nghĩa là:",["Trễ 1 giờ","Đến ngày hôm sau","Thêm 1 khách","Nối chuyến"],1],
+["Mã ICAO của sân bay gồm:",["2 ký tự","3 ký tự","4 ký tự","6 ký tự"],2],
+["Nha Trang bay đến sân bay nào?",["NHA","CXR","DAD","HUI"],1],
+["PVG là:",["Hồng Kiều","Phố Đông","Đại Hưng","Thủ Đô"],1],
+["Tokyo có 2 sân bay là:",["NRT và KIX","NRT và HND","HND và KIX","NRT và ICN"],1],
+["Hộ chiếu loại D là:",["Phổ thông","Công vụ","Ngoại giao","Tạm thời"],2],
+["DOE trên hộ chiếu là:",["Ngày sinh","Ngày cấp","Ngày hết hạn","Nơi sinh"],2],
+["MRZ gồm:",["1 dòng 44 ký tự","2 dòng, mỗi dòng 44 ký tự","3 dòng 30 ký tự","2 dòng 20 ký tự"],1],
+["Visa do ai cấp?",["Nước mình","Nước đến","Hãng hàng không","Công ty du lịch"],1],
+["Visa đoàn Trung Quốc:",["Dán từng hộ chiếu","Cấp trên danh sách chung, cả đoàn đi cùng nhau","Khách tách đoàn tự do","Chỉ cho người nước ngoài"],1],
+["Port Visa Notification có hiệu lực:",["1 tuần","1 tháng","6 tháng","1 năm"],1],
+["Tiêu chuẩn hành lý trong tài liệu:",["5 + 15 kg","7 + 20 kg","10 + 23 kg","7 + 30 kg"],1],
+["Chất lỏng xách tay quốc tế mỗi chai tối đa:",["50 ml","100 ml","150 ml","500 ml"],1],
+["Pin sạc dự phòng phải để ở:",["Ký gửi","Xách tay","Cả hai đều được","Gửi riêng ở quầy"],1],
+["Pin trên mức nào bị cấm hoàn toàn?",["100 Wh","160 Wh","200 Wh","300 Wh"],1],
+["Tiền mặt không phải khai báo:",["3.000 USD","5.000 USD","7.000 USD","10.000 USD"],1],
+["Hàng trên bao nhiêu nên khai báo khi xuất cảnh?",["100 USD","300 USD","1.000 USD","5.000 USD"],1],
+["Hàng mua nước ngoài vượt mức miễn thuế thì đi:",["Luồng xanh","Luồng đỏ","Luồng nào cũng được","Cửa quá cảnh"],1],
+["Mất vali ký gửi, biên bản lập là:",["PNR","PIR","SSR","FOC"],1],
+["Chuyến bay 01:40 ngày 23/11, khách tập trung lúc:",["01:00 ngày 23/11","22:30 ngày 22/11","06:00 ngày 23/11","00:00 ngày 22/11"],1],
+["WCHC dành cho khách:",["Đi bộ xa khó","Không tự lên xuống thang","Hoàn toàn không tự di chuyển","Đi cùng trẻ nhỏ"],2]
+];
+
+const TZ=[
+  ["Tokyo (NRT)", 2],
+  ["Seoul (ICN)", 2],
+  ["Bắc Kinh (PEK)", 1],
+  ["Singapore (SIN)", 1],
+  ["Đài Bắc (TPE)", 1],
+  ["Dubai (DXB)", -3]
+];
+
+/* ==========================================================================
+   STATE & UTILS
+   ========================================================================== */
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const V = $("#v");
+
+// Sound Effects Synthesizer (Zero external dependencies)
+let soundEnabled = localStorage.getItem('app_sound') !== 'false';
+function playSound(type) {
+  if (!soundEnabled) return;
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    
+    if (type === 'flip') {
+      osc.frequency.setValueAtTime(320, ctx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(480, ctx.currentTime + 0.08);
+      gain.gain.setValueAtTime(0.06, ctx.currentTime);
+      gain.gain.linearRampToValueAtTime(0.001, ctx.currentTime + 0.08);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.08);
+    } else if (type === 'correct') {
+      osc.frequency.setValueAtTime(523.25, ctx.currentTime); // C5
+      osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.09); // E5
+      gain.gain.setValueAtTime(0.1, ctx.currentTime);
+      gain.gain.linearRampToValueAtTime(0.001, ctx.currentTime + 0.25);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.25);
+    } else if (type === 'wrong') {
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(260, ctx.currentTime);
+      osc.frequency.linearRampToValueAtTime(180, ctx.currentTime + 0.18);
+      gain.gain.setValueAtTime(0.12, ctx.currentTime);
+      gain.gain.linearRampToValueAtTime(0.001, ctx.currentTime + 0.18);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.18);
+    }
+  } catch (e) {}
+}
+
+// Confetti Particle System
+function launchConfetti() {
+  const canvas = $("#confetti-canvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  
+  const particles = [];
+  const colors = ["#6366f1", "#10b981", "#f59e0b", "#ec4899", "#3b82f6", "#8b5cf6"];
+  
+  for (let idx = 0; idx < 80; idx++) {
+    particles.push({
+      x: canvas.width / 2,
+      y: canvas.height * 0.4,
+      w: Math.random() * 8 + 4,
+      h: Math.random() * 6 + 4,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      vx: (Math.random() - 0.5) * 14,
+      vy: (Math.random() - 0.7) * 16,
+      rot: Math.random() * 360,
+      rotSpeed: (Math.random() - 0.5) * 10,
+      opacity: 1
+    });
+  }
+  
+  let frame = 0;
+  function update() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let alive = false;
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += 0.35;
+      p.rot += p.rotSpeed;
+      p.opacity -= 0.009;
+      if (p.opacity > 0) {
+        alive = true;
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate((p.rot * Math.PI) / 180);
+        ctx.globalAlpha = Math.max(0, p.opacity);
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+        ctx.restore();
+      }
+    });
+    frame++;
+    if (alive && frame < 180) {
+      requestAnimationFrame(update);
+    } else {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+  }
+  requestAnimationFrame(update);
+}
+
+// Theme Handling
+const savedTheme = localStorage.getItem('app_theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+document.documentElement.setAttribute('data-theme', savedTheme);
+
+function updateThemeIcons() {
+  const current = document.documentElement.getAttribute('data-theme');
+  $("#themeBtn").textContent = current === 'dark' ? '☀️' : '🌙';
+  $("#soundBtn").textContent = soundEnabled ? '🔊' : '🔇';
+}
+updateThemeIcons();
+
+$("#themeBtn").onclick = () => {
+  const cur = document.documentElement.getAttribute('data-theme');
+  const nxt = cur === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', nxt);
+  localStorage.setItem('app_theme', nxt);
+  updateThemeIcons();
+};
+
+$("#soundBtn").onclick = () => {
+  soundEnabled = !soundEnabled;
+  localStorage.setItem('app_sound', soundEnabled);
+  updateThemeIcons();
+};
+
+/* Tab Navigation */
+let currentTab = 0;
+function tab(n) {
+  currentTab = n;
+  [0, 1, 2, 3].forEach(k => {
+    const btn = $("#t" + k);
+    if (btn) btn.classList.toggle("active", k === n);
+  });
+  [card, quiz, calc, searchView][n]();
+}
+[0, 1, 2, 3].forEach(k => {
+  const btn = $("#t" + k);
+  if (btn) btn.onclick = () => tab(k);
+});
+
+/* ==========================================================================
+   TAB 0: FLASHCARDS (THẺ GHI NHỚ) - SOLVED OVERFLOW & TOUCH SWIPE
+   ========================================================================== */
+let i = 0, flip = false, deck = [...CARDS.keys()], known = new Set();
+
+function formatAnswer(text) {
+  const lines = text.split('\n').filter(l => l.trim().length > 0);
+  if (lines.length > 1) {
+    return `<div class="card-answer-list">` + 
+      lines.map(line => `<div class="answer-item"><span class="dot">✦</span><span>${escapeHtml(line)}</span></div>`).join('') +
+      `</div>`;
+  }
+  if (text.includes(' · ')) {
+    const parts = text.split(' · ');
+    return `<div class="card-answer-list">` + 
+      parts.map(p => `<div class="answer-item"><span class="dot">✦</span><span>${escapeHtml(p)}</span></div>`).join('') +
+      `</div>`;
+  }
+  return `<p class="card-question" style="font-size:16px;font-weight:600;">${escapeHtml(text)}</p>`;
+}
+
+function escapeHtml(str) {
+  return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function card() {
+  if (!deck.length) {
+    launchConfetti();
+    V.innerHTML = `
+      <div class="card-box celebrate-card">
+        <div class="celebrate-icon">🏆</div>
+        <h2>Chúc mừng bạn đã hoàn thành!</h2>
+        <p>Bạn đã ghi nhớ toàn bộ <b>${CARDS.length} thẻ kiến thức</b> nghiệp vụ.</p>
+        <div class="btn-group" style="max-width:280px;margin:0 auto;">
+          <button class="btn primary" id="resetDeck">
+            <span>🔄</span> Học lại từ đầu
+          </button>
+        </div>
+      </div>
+    `;
+    $("#resetDeck").onclick = () => {
+      known.clear();
+      deck = [...CARDS.keys()];
+      i = 0;
+      card();
+    };
+    return;
+  }
+
+  i %= deck.length;
+  const currentCard = CARDS[deck[i]];
+  const progressPct = Math.round((known.size / CARDS.length) * 100);
+  const isTicketCode = currentCard[0].includes(' ') && (currentCard[0].includes('HK') || currentCard[0].includes('DOCS') || currentCard[0].includes('SJW') || currentCard[0].includes('SGN'));
+
+  V.innerHTML = `
+    <div class="card-box">
+      <!-- Progress Bar -->
+      <div class="progress-header">
+        <span>Thẻ ${i + 1} / ${deck.length} (Còn lại)</span>
+        <span class="badge ${known.size > 0 ? 'success' : ''}">Đã thuộc: ${known.size} / ${CARDS.length} (${progressPct}%)</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" style="width: ${progressPct}%"></div>
+      </div>
+
+      <!-- 3D Flip Card Container with Grid Auto-Height -->
+      <div class="flashcard-wrapper ${flip ? 'flipped' : ''}" id="cardWrapper">
+        <div class="flashcard-3d">
+          <!-- Card Front -->
+          <div class="card-face card-front">
+            <div class="card-face-header">
+              <span class="badge">Mặt trước · Đề bài / Thuật ngữ</span>
+              <span style="font-size: 12px; color: var(--text-sub); font-weight:700;">#${deck[i] + 1}</span>
+            </div>
+            <div class="card-face-body">
+              <div class="card-question ${isTicketCode ? 'code-font' : ''}">
+                ${escapeHtml(currentCard[0])}
+              </div>
+            </div>
+            <div class="card-face-footer">
+              <span>👆 Chạm vào thẻ để lật xem đáp án</span>
+            </div>
+          </div>
+
+          <!-- Card Back -->
+          <div class="card-face card-back">
+            <div class="card-face-header">
+              <span class="badge success">Mặt sau · Giải nghĩa chi tiết</span>
+              <span style="font-size: 12px; color: var(--text-sub); font-weight:700;">#${deck[i] + 1}</span>
+            </div>
+            <div class="card-face-body">
+              ${formatAnswer(currentCard[1])}
+            </div>
+            <div class="card-face-footer">
+              <span>👆 Chạm để lật lại mặt trước</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="btn-group">
+        <button class="btn danger" id="btnNo" title="Phím tắt: [←] hoặc vuốt trái">
+          <span>🔄</span> Chưa thuộc
+        </button>
+        <button class="btn" id="btnFlip" title="Phím tắt: [Space]">
+          <span>🔁</span> Lật thẻ
+        </button>
+        <button class="btn success" id="btnOk" title="Phím tắt: [→] hoặc vuốt phải">
+          <span>✨</span> Đã thuộc
+        </button>
+      </div>
+
+      <div class="keyboard-hints">
+        <span class="desktop-hint">Phím tắt: <span class="kbd">Space</span> Lật · <span class="kbd">←</span> Chưa thuộc · <span class="kbd">→</span> Đã thuộc</span>
+        <span class="mobile-hint">💡 <b>Vuốt phải:</b> Đã thuộc · <b>Vuốt trái:</b> Chưa thuộc · <b>Chạm:</b> Lật thẻ</span>
+      </div>
+    </div>
+  `;
+
+  const wrapper = $("#cardWrapper");
+
+  // Touch & Swipe Support for Mobile
+  let touchStartX = 0, touchStartY = 0, isTouchMoving = false;
+
+  wrapper.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    isTouchMoving = false;
+  }, { passive: true });
+
+  wrapper.addEventListener('touchmove', e => {
+    const diffX = e.touches[0].clientX - touchStartX;
+    const diffY = e.touches[0].clientY - touchStartY;
+    if (Math.abs(diffX) > 15 && Math.abs(diffX) > Math.abs(diffY)) {
+      isTouchMoving = true;
+      const rot = Math.max(-10, Math.min(10, diffX * 0.06));
+      wrapper.style.transform = `translateX(${diffX * 0.25}px) rotate(${rot}deg)`;
+    }
+  }, { passive: true });
+
+  wrapper.addEventListener('touchend', e => {
+    wrapper.style.transform = '';
+    const diffX = e.changedTouches[0].clientX - touchStartX;
+    const diffY = e.changedTouches[0].clientY - touchStartY;
+
+    if (Math.abs(diffX) > 60 && Math.abs(diffX) > Math.abs(diffY)) {
+      // Horizontal swipe detected
+      if (diffX > 60) {
+        $("#btnOk").click();
+      } else {
+        $("#btnNo").click();
+      }
+    } else if (!isTouchMoving && Math.abs(diffX) < 15 && Math.abs(diffY) < 15) {
+      // Tap detected
+      flip = !flip;
+      playSound('flip');
+      wrapper.classList.toggle('flipped', flip);
+    }
+  });
+
+  // Desktop Click
+  wrapper.onclick = e => {
+    // If it's a touch device, touchend already handled it
+    if (window.matchMedia('(pointer: coarse)').matches) return;
+    flip = !flip;
+    playSound('flip');
+    wrapper.classList.toggle('flipped', flip);
+  };
+
+  $("#btnFlip").onclick = () => {
+    flip = !flip;
+    playSound('flip');
+    wrapper.classList.toggle('flipped', flip);
+  };
+
+  $("#btnOk").onclick = () => {
+    playSound('correct');
+    known.add(deck[i]);
+    deck.splice(i, 1);
+    flip = false;
+    card();
+  };
+
+  $("#btnNo").onclick = () => {
+    playSound('flip');
+    i++;
+    flip = false;
+    card();
+  };
+}
+
+/* Keyboard Navigation */
+window.onkeydown = e => {
+  if (currentTab === 0) {
+    if (e.code === 'Space') {
+      e.preventDefault();
+      $("#btnFlip") && $("#btnFlip").click();
+    } else if (e.code === 'ArrowLeft' || e.key === '1') {
+      e.preventDefault();
+      $("#btnNo") && $("#btnNo").click();
+    } else if (e.code === 'ArrowRight' || e.key === '2') {
+      e.preventDefault();
+      $("#btnOk") && $("#btnOk").click();
+    }
+  } else if (currentTab === 1) {
+    if (e.code === 'Enter') {
+      const nextBtn = $("#nx");
+      if (nextBtn) nextBtn.click();
+    } else if (['1', '2', '3', '4'].includes(e.key)) {
+      const idx = parseInt(e.key) - 1;
+      const opts = $$(".quiz-opt");
+      if (opts[idx] && !opts[idx].disabled) opts[idx].click();
+    }
+  }
+};
+
+/* ==========================================================================
+   TAB 1: QUIZ (TRẮC NGHIỆM)
+   ========================================================================== */
+let q = [], qi = 0, sc = 0, streak = 0;
+
+function quiz() {
+  if (!q.length) {
+    q = [...QS].sort(() => Math.random() - 0.5);
+    qi = 0;
+    sc = 0;
+    streak = 0;
+  }
+
+  if (qi >= q.length) {
+    const pct = Math.round((sc / q.length) * 100);
+    let gradeMsg = "Cần ôn tập thêm!";
+    let gradeIcon = "📚";
+    if (pct >= 90) {
+      gradeMsg = "Xuất sắc! Nắm cực kỳ vững nghiệp vụ!";
+      gradeIcon = "🌟";
+      launchConfetti();
+    } else if (pct >= 75) {
+      gradeMsg = "Rất tốt! Bạn đã vượt qua bài thi xuất sắc!";
+      gradeIcon = "🎉";
+      launchConfetti();
+    } else if (pct >= 50) {
+      gradeMsg = "Khá tốt! Ôn lại các câu sai để đạt điểm tối đa!";
+      gradeIcon = "👍";
+    }
+
+    V.innerHTML = `
+      <div class="card-box celebrate-card">
+        <div class="celebrate-icon">${gradeIcon}</div>
+        <h2>Kết Quả: ${sc} / ${q.length} (${pct}%)</h2>
+        <p>${gradeMsg}</p>
+        <div class="btn-group" style="max-width:280px;margin:0 auto;">
+          <button class="btn primary" id="btnRestartQuiz">
+            <span>🔄</span> Làm lại đề khác
+          </button>
+        </div>
+      </div>
+    `;
+    $("#btnRestartQuiz").onclick = () => {
+      q = [];
+      quiz();
+    };
+    return;
+  }
+
+  const [t, o, a] = q[qi];
+  const progressPct = Math.round((qi / q.length) * 100);
+
+  V.innerHTML = `
+    <div class="card-box">
+      <!-- Top Bar -->
+      <div class="quiz-header-bar">
+        <div class="badge">Câu ${qi + 1} / ${q.length}</div>
+        <div class="quiz-score-pill">
+          <span>🏆 Điểm: <b>${sc}</b></span>
+          ${streak > 1 ? `<span style="color:var(--warning);">🔥 ${streak}</span>` : ''}
+        </div>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" style="width: ${progressPct}%"></div>
+      </div>
+
+      <!-- Question -->
+      <div>
+        <h2 class="quiz-title">${escapeHtml(t)}</h2>
+      </div>
+
+      <!-- Options -->
+      <div class="options-grid" id="o"></div>
+
+      <!-- Feedback Area -->
+      <div id="f"></div>
+      <div class="btn-group" id="n" style="margin-top:14px;"></div>
+    </div>
+  `;
+
+  const optContainer = $("#o");
+  const prefixes = ["A", "B", "C", "D"];
+
+  o.forEach((optText, k) => {
+    const b = document.createElement("button");
+    b.className = "quiz-opt";
+    b.innerHTML = `
+      <span class="opt-prefix">${prefixes[k]}</span>
+      <span style="flex:1;">${escapeHtml(optText)}</span>
+    `;
+
+    b.onclick = () => {
+      const allBtns = [...optContainer.children];
+      allBtns.forEach((e, j) => {
+        e.disabled = true;
+        if (j === a) {
+          e.classList.add("ok");
+        }
+      });
+
+      if (k === a) {
+        sc++;
+        streak++;
+        playSound('correct');
+        $("#f").innerHTML = `
+          <div class="quiz-feedback correct">
+            <span>✅</span>
+            <span>Chính xác! Đáp án: <b>${prefixes[a]}. ${escapeHtml(o[a])}</b></span>
+          </div>
+        `;
+      } else {
+        streak = 0;
+        b.classList.add("no");
+        playSound('wrong');
+        $("#f").innerHTML = `
+          <div class="quiz-feedback incorrect">
+            <span>❌</span>
+            <span>Chưa chính xác! Đáp án đúng: <b>${prefixes[a]}. ${escapeHtml(o[a])}</b></span>
+          </div>
+        `;
+      }
+
+      $("#n").innerHTML = `
+        <button class="btn primary" id="nx" style="width:100%;">
+          <span>${qi + 1 === q.length ? 'Xem kết quả' : 'Câu tiếp theo'}</span>
+          <span>➔</span>
+        </button>
+      `;
+      $("#nx").onclick = () => {
+        qi++;
+        quiz();
+      };
+    };
+    optContainer.appendChild(b);
+  });
+}
+
+/* ==========================================================================
+   TAB 2: FLIGHT TIME & GATHERING CALCULATOR (TÍNH GIỜ BAY)
+   ========================================================================== */
+let s;
+const hm = m => {
+  m = ((m % 1440) + 1440) % 1440;
+  return String(Math.floor(m / 60)).padStart(2, "0") + ":" + String(m % 60).padStart(2, "0");
+};
+
+function calc() {
+  const z = TZ[Math.floor(Math.random() * TZ.length)];
+  const dep = Math.floor(Math.random() * 288) * 5;
+  const dur = (210 + Math.floor(Math.random() * 30) * 10);
+  const arrVN = dep + dur;
+  const arrLocal = arrVN + z[1] * 60;
+  s = { dur, dep, z, arrLocal };
+
+  const day = Math.floor(arrLocal / 1440);
+  const plus = day > 0 ? "+" + day : (day < 0 ? String(day) : "");
+  const destCode = z[0].match(/\((.+)\)/) ? z[0].match(/\((.+)\)/)[1] : "DST";
+  const destCity = z[0].split(" (")[0];
+
+  V.innerHTML = `
+    <div class="card-box">
+      <!-- Boarding Pass Graphic -->
+      <div class="boarding-pass">
+        <div class="boarding-pass-header">
+          <div class="flight-number">
+            <span>✈️</span>
+            <span>CHUYẾN BAY QUỐC TẾ</span>
+          </div>
+          <span class="badge" style="background:rgba(255,255,255,0.2);color:#fff;border:none;">THỰC HÀNH TÍNH GIỜ</span>
+        </div>
+        <div class="boarding-pass-body">
+          <div class="route-display">
+            <div class="airport-block">
+              <h2>SGN</h2>
+              <p>Tân Sơn Nhất (VN)</p>
+            </div>
+            <div class="route-arrow">
+              <span class="badge" style="font-size:9px;padding:2px 6px;">BAY THẲNG</span>
+              <div class="plane-line">
+                <span class="plane-icon">✈</span>
+              </div>
+            </div>
+            <div class="airport-block">
+              <h2>${destCode}</h2>
+              <p>${escapeHtml(destCity)}</p>
+            </div>
+          </div>
+
+          <div class="flight-times-row">
+            <div class="time-item">
+              <span class="time-label">Khởi hành (Giờ VN)</span>
+              <span class="time-val">${hm(dep)}</span>
+            </div>
+            <div class="time-item">
+              <span class="time-label">Hạ cánh (${destCity})</span>
+              <span class="time-val">${hm(arrLocal)} ${plus ? `<b style="color:var(--warning);font-size:13px;">(${plus})</b>` : ''}</span>
+            </div>
+          </div>
+
+          <div class="tz-notice">
+            📌 <b>Múi giờ:</b> ${destCity} <b>${z[1] > 0 ? "nhanh hơn (+ " + z[1] + "h)" : "chậm hơn (" + z[1] + "h)"}</b> so với Việt Nam.
+          </div>
+        </div>
+      </div>
+
+      <!-- Flight Time Calculation Input -->
+      <h3 style="font-size:15px;font-weight:700;margin-bottom:6px;">1. Tính thời gian bay thực tế:</h3>
+      <p style="font-size:13.5px;color:var(--text-muted);margin-bottom:10px;">
+        Đổi giờ đến về giờ Việt Nam, sau đó trừ đi giờ cất cánh để tìm tổng thời gian bay:
+      </p>
+
+      <div class="calc-inputs-row">
+        <div class="input-stepper">
+          <input id="h" type="number" min="0" max="24" placeholder="0" inputmode="numeric">
+          <span class="input-unit">giờ</span>
+        </div>
+        <div class="input-stepper">
+          <input id="m" type="number" min="0" max="59" step="5" placeholder="00" inputmode="numeric">
+          <span class="input-unit">phút</span>
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn primary" id="ck">
+          <span>✔️</span> Kiểm tra
+        </button>
+        <button class="btn" id="nw">
+          <span>🔄</span> Đề khác
+        </button>
+      </div>
+
+      <div id="f" style="margin-top:12px;"></div>
+
+      <hr style="border:0;border-top:1px solid var(--border);margin:20px 0;">
+
+      <!-- Gathering Time Rule Section -->
+      <h3 style="font-size:15px;font-weight:700;margin-bottom:6px;">2. Nghiệp vụ giờ tập trung đoàn tại sân bay:</h3>
+      <p style="font-size:13.5px;color:var(--text-muted);line-height:1.45;">
+        Chuyến bay cất cánh lúc <b>${hm(dep)}</b> ngày <b>${dep < 180 ? "15/03" : "14/03"}</b>. Đoàn đông quốc tế cần tập trung trước <b>3 giờ</b>.
+      </p>
+      
+      <div style="margin-top:10px;">
+        <button class="btn" id="sh" style="width:100%;">
+          <span>👁️</span> Xem giờ tập trung & Giải thích
+        </button>
+      </div>
+
+      <div id="g" style="margin-top:12px;"></div>
+    </div>
+  `;
+
+  $("#ck").onclick = () => {
+    const t = (+$("#h").value || 0) * 60 + (+$("#m").value || 0);
+    const durHours = Math.floor(dur / 60);
+    const durMins = dur % 60;
+    
+    const arrVNModulo = ((arrVN % 1440) + 1440) % 1440;
+    const formulaStep1 = `Giờ đến quy về giờ VN = ${hm(arrLocal)} ${z[1] > 0 ? "− " + z[1] + "h" : "+ " + Math.abs(z[1]) + "h"} = <b>${hm(arrVNModulo)}</b>`;
+    const formulaStep2 = `Thời gian bay = Giờ đến (VN) − Giờ đi (${hm(dep)}) = <b>${durHours} giờ ${durMins > 0 ? durMins + ' phút' : ''}</b>`;
+
+    if (t === dur) {
+      playSound('correct');
+      $("#f").innerHTML = `
+        <div class="quiz-feedback correct">
+          <div>
+            <div style="font-size:14.5px;font-weight:700;">✅ Chính xác tuyệt đối!</div>
+            <div style="font-size:12.5px;margin-top:4px;">${formulaStep1}<br>${formulaStep2}</div>
+          </div>
+        </div>
+      `;
+    } else {
+      playSound('wrong');
+      $("#f").innerHTML = `
+        <div class="quiz-feedback incorrect">
+          <div>
+            <div style="font-size:14.5px;font-weight:700;">❌ Chưa chính xác. Đáp án: ${durHours} giờ ${durMins} phút</div>
+            <div style="font-size:12.5px;margin-top:4px;">
+              <b>Cách giải:</b><br>
+              • ${formulaStep1}<br>
+              • ${formulaStep2}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+  };
+
+  $("#nw").onclick = calc;
+
+  $("#sh").onclick = () => {
+    const c = dep - 180;
+    const isNightBefore = c < 0;
+    const gatheringDate = isNightBefore ? (dep < 180 ? "14/03" : "13/03") : (dep < 180 ? "15/03" : "14/03");
+    
+    $("#g").innerHTML = `
+      <div class="quiz-feedback correct" style="background:var(--primary-bg);border-color:rgba(99,102,241,0.3);color:var(--text-main);">
+        <div>
+          <div style="font-size:14.5px;font-weight:700;color:var(--primary-light);">
+            📍 Giờ có mặt: ${hm(c)} ngày ${gatheringDate} ${isNightBefore ? "(Tối hôm trước!)" : ""}
+          </div>
+          <div style="font-size:12.5px;margin-top:6px;line-height:1.45;color:var(--text-muted);">
+            <b>Quy tắc nghiệp vụ:</b><br>
+            • Chuyến bay quốc tế: tập trung trước <b>2–3 giờ</b> (đoàn đông: trước <b>3 giờ</b>).<br>
+            • ${dep < 180 ? "<b>Lưu ý quan trọng:</b> Chuyến bay sau 00:00 (rạng sáng), HDV và khách phải tập trung từ <b>tối hôm trước</b> để không bị trễ chuyến!" : "Khách tập trung cùng ngày trước 3 tiếng."}
+          </div>
+        </div>
+      </div>
+    `;
+  };
+}
+
+/* ==========================================================================
+   TAB 3: QUICK SEARCH & REFERENCE (TRA CỨU NHANH)
+   ========================================================================== */
+function searchView() {
+  V.innerHTML = `
+    <div class="card-box">
+      <div class="search-bar-wrapper">
+        <span class="search-icon-pos">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Tìm mã vé, sân bay, visa, hành lý..." autofocus>
+        <button id="clearSearchBtn" class="search-clear-btn" style="display:none;" title="Xóa">✕</button>
+      </div>
+
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;font-size:12px;color:var(--text-sub);">
+        <span id="searchCount">Đang hiển thị toàn bộ ${CARDS.length} thẻ ghi nhớ</span>
+      </div>
+
+      <div id="searchResults"></div>
+    </div>
+  `;
+
+  const input = $("#searchInput");
+  const clearBtn = $("#clearSearchBtn");
+  const resultsBox = $("#searchResults");
+  const countBox = $("#searchCount");
+
+  function renderList(query) {
+    const q = query.trim().toLowerCase();
+    clearBtn.style.display = q ? "flex" : "none";
+
+    const filtered = CARDS.filter(([front, back]) => {
+      if (!q) return true;
+      return front.toLowerCase().includes(q) || back.toLowerCase().includes(q);
+    });
+
+    countBox.textContent = `Tìm thấy ${filtered.length} / ${CARDS.length} mục`;
+
+    if (!filtered.length) {
+      resultsBox.innerHTML = `
+        <div style="text-align:center;padding:28px 10px;color:var(--text-sub);">
+          <div style="font-size:28px;margin-bottom:6px;">🔍</div>
+          <p>Không tìm thấy nội dung phù hợp với "<b>${escapeHtml(query)}</b>"</p>
+        </div>
+      `;
+      return;
+    }
+
+    resultsBox.innerHTML = filtered.map(([front, back]) => {
+      return `
+        <div class="ref-card-item">
+          <div class="ref-title">
+            <span>${escapeHtml(front)}</span>
+          </div>
+          <div class="ref-content">${escapeHtml(back)}</div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  input.oninput = e => renderList(e.target.value);
+  clearBtn.onclick = () => {
+    input.value = "";
+    input.focus();
+    renderList("");
+  };
+  renderList('');
+}
+
+// Initial launch
+card();
+</script>
+</body>
+</html>

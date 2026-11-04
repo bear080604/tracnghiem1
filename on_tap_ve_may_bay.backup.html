@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ôn thi Vé máy bay – XNC – Hải quan</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--tx:#1d2433;--mu:#667085;--ac:#2f5bea;--ok:#12805c;--no:#c0392b;--bd:#d9dde7;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12151c;--card:#1c212c;--tx:#e8ebf2;--mu:#9aa3b5;--ac:#7b9cff;--ok:#4cc79a;--no:#ff7b6b;--bd:#30374a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12151c;--card:#1c212c;--tx:#e8ebf2;--mu:#9aa3b5;--ac:#7b9cff;--ok:#4cc79a;--no:#ff7b6b;--bd:#30374a;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:640px;margin:0 auto;padding:14px}
+h1{font-size:19px;margin:6px 0 10px}
+nav{display:flex;gap:6px;margin-bottom:12px}
+nav button{flex:1;padding:10px 4px;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:10px;font:inherit;font-size:14px;cursor:pointer}
+nav button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.box{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px}
+.mu{color:var(--mu);font-size:14px}
+.btn{padding:10px 14px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit;cursor:pointer}
+.btn.p{background:var(--ac);color:#fff;border-color:var(--ac)}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.row>*{flex:1}
+#fc{min-height:170px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:19px;cursor:pointer;white-space:pre-line}
+.opt{display:block;width:100%;text-align:left;margin-top:8px;padding:11px 12px;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:10px;font:inherit;cursor:pointer}
+.opt.ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 18%,var(--card))}
+.opt.no{border-color:var(--no);background:color-mix(in srgb,var(--no) 18%,var(--card))}
+input{width:70px;padding:9px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx);font:inherit}
+.fb{margin-top:10px;font-weight:600}
+</style></head><body><main>
+<h1>Ôn thi: Vé máy bay – Xuất nhập cảnh – Hải quan</h1>
+<nav><button id="t0" class="on">Thẻ ghi nhớ</button><button id="t1">Trắc nghiệm</button><button id="t2">Tính giờ</button></nav>
+<div id="v"></div>
+</main>
+<script>
+const $=s=>document.querySelector(s);
+const CARDS=[
+["VN300 Y TU14JAN SGNNRT HK15 0010 0745","VN300: Vietnam Airlines, chuyến 300\nY: phổ thông giá đầy đủ\nTU14JAN: Thứ Ba 14/1\nSGN→NRT: Tân Sơn Nhất → Narita\nHK15: 15 chỗ đã xác nhận\n00:10 đi (giờ VN), 07:45 đến (giờ Tokyo)\nBay 5h35"],
+["SSR DOCS … P/VNM/số HC/VNM/15MAR58/M/20AUG32/TRAN/VAN BINH","P: hộ chiếu · VNM: nước cấp · số HC · VNM: quốc tịch · ngày sinh 15/03/1958 · M: nam · hết hạn 20/08/2032 · họ/tên\nDOCS: gửi trước thông tin hộ chiếu cho hãng. Phải khớp tuyệt đối từng ký tự"],
+["3U8254 SJWCTU 2240 0110+1","3U: Sichuan Airlines\nSJW Thạch Gia Trang → CTU Thành Đô\nĐi 22:40, đến 01:10 ngày hôm sau (+1)"],
+["TW122 SGN-ICN, Thu 14-Mar, bay 01:30. Có mặt khi nào?","22:30 ngày 13/03 (trước 3 giờ, tối ngày hôm trước)"],
+["EK393 SGN-DXB: 23:55 → 04:00 giờ Dubai (chậm hơn VN 3 giờ). Bay bao lâu?","04:00 + 3h = 07:00 giờ VN\n07:00 − 23:55 = 7h05"],
+["Chênh lệch múi giờ so với VN","Nhật, Hàn +2 · Trung Quốc, Singapore, Đài Loan +1 · Thái Lan 0 · Dubai −3"],
+["Cách tính thời gian bay","Đổi giờ đến về giờ VN, rồi trừ giờ đi. Giờ trên vé là giờ địa phương"],
+["Giờ có mặt chuyến quốc tế","Trước 2–3 giờ (đoàn đông: 3 giờ). Bay sau 0h thì tập trung tối hôm trước"],
+["HK / RR / HL / UN","HK: đã xác nhận · RR: tái xác nhận · HL: danh sách chờ · UN: hãng không có chỗ\nChỉ giao vé khi HK hoặc RR"],
+["PNR là gì?","Mã đặt chỗ, thường 6 ký tự (ví dụ NW4WSJ), dùng chung cho cả booking"],
+["3 số đầu của số vé (13 số)","Mã hãng phát hành vé: 784 China Southern, 738 Vietnam Airlines"],
+["WCHR / WCHS / WCHC","WCHR: đi bộ xa khó, tự lên xuống thang\nWCHS: không tự lên xuống thang\nWCHC: không tự di chuyển"],
+["Open-jaw","Vào một thành phố, ra từ thành phố khác (vào PEK, về từ PVG; vào KHH, về từ TPE)"],
+["+1 sau giờ đến","Hạ cánh ngày hôm sau"],
+["IATA và ICAO","IATA: 3 chữ (SGN), dùng đặt vé. ICAO: 4 chữ (VVTS), dùng điều hành bay"],
+["SGN · HAN · DAD · CXR · PQC","Tân Sơn Nhất (TP.HCM) · Nội Bài (Hà Nội) · Đà Nẵng · Cam Ranh (Nha Trang) · Phú Quốc"],
+["PEK · PKX · PVG · SHA","Bắc Kinh Thủ Đô · Bắc Kinh Đại Hưng · Thượng Hải Phố Đông (quốc tế) · Thượng Hải Hồng Kiều (nội địa)"],
+["CTU · SJW · HGH · KMG · NKG · TEN","Thành Đô · Thạch Gia Trang · Hàng Châu · Côn Minh · Nam Kinh · Đồng Nhân"],
+["ICN · GMP · PUS · CJU","Incheon · Gimpo (Seoul) · Busan · Jeju"],
+["NRT · HND · KIX","Narita · Haneda (Tokyo) · Kansai (Osaka)"],
+["KHH · TPE","Cao Hùng · Đào Viên (Đài Bắc)"],
+["BKK · DMK · SIN · KUL","Suvarnabhumi · Don Mueang (Bangkok) · Changi (Singapore) · Kuala Lumpur"],
+["DXB · HKG · MFM","Dubai · Hồng Kông · Ma Cao"],
+["Loại hộ chiếu P / D / S","P: phổ thông · D: ngoại giao · S: công vụ"],
+["DOB · POB · DOI · DOE","Ngày sinh · nơi sinh · ngày cấp · ngày hết hạn"],
+["MRZ","Vùng đọc máy cuối trang hộ chiếu: 2 dòng, mỗi dòng 44 ký tự"],
+["Hộ chiếu cần còn hạn bao lâu?","Ít nhất 6 tháng, còn trang trống"],
+["Visa khác hộ chiếu thế nào?","Hộ chiếu do nước mình cấp. Visa do nước đến cấp để cho nhập cảnh"],
+["Phân loại visa (bản thầy sửa)","Mục đích: du lịch, công tác, du học, thăm thân nhân\nSố lần: Single, Multiple\nHình thức cấp: dán, rời, đoàn, e-visa, cấp tại cửa khẩu\nĐối tượng: cá nhân, đoàn, ngoại giao, công tác"],
+["Visa đoàn Trung Quốc","Cấp trên danh sách chung, cả đoàn nhập xuất cảnh cùng nhau, không tách đoàn"],
+["Port Visa Notification","Thông báo visa đoàn nhận tại cửa khẩu, hiệu lực 1 tháng, có dấu và số phê duyệt"],
+["Indian e-Visa: Multiple, 365 days, ≤ 90 days","Nhập nhiều lần · hiệu lực 1 năm · mỗi lần ở tối đa 90 ngày liên tục"],
+["Hành lý tiêu chuẩn","7 kg xách tay + 20 kg ký gửi"],
+["Chất lỏng xách tay quốc tế","Mỗi chai ≤ 100 ml, đựng chung túi trong suốt có khóa, tổng khoảng 1 lít"],
+["Pin sạc dự phòng","Chỉ xách tay, cấm ký gửi. Trên 100 Wh cần hãng đồng ý, trên 160 Wh bị cấm"],
+["Bay nội địa Trung Quốc, pin sạc","Cần dấu 3C (CCC). Dấu CE không thay thế được"],
+["Tiền mặt không phải khai báo","5.000 USD và 15.000.000 đồng mỗi người. Vượt thì khai báo, kèm giấy xác nhận ngân hàng hoặc tờ khai lần trước"],
+["Hàng trên 300 USD (máy ảnh, laptop)","Khai báo khi xuất cảnh để khi về chứng minh là đồ mang đi"],
+["Hàng mua nước ngoài vượt mức miễn thuế (khoảng 10 triệu)","Khai báo, nộp thuế phần vượt, giữ hóa đơn, đi luồng đỏ"],
+["Mất vali ký gửi","Báo quầy Lost & Found tại sân bay, lập PIR, để lại địa chỉ khách sạn, giữ hóa đơn đồ mua tạm, báo công ty"],
+["FOC · T/L · TWN · DBL","Miễn phí 1 suất · trưởng đoàn · 2 giường đơn · 1 giường đôi"],
+["Khách bị lạc đoàn","Đứng yên hoặc về điểm hẹn, gọi trưởng đoàn, đưa danh thiếp khách sạn cho cảnh sát hoặc người địa phương"]];
+const QS=[
+["HK trên vé nghĩa là gì?",["Danh sách chờ","Chỗ đã xác nhận","Hãng không có chỗ","Đã hủy"],1],
+["Mã nào là hãng không thể cung cấp chỗ?",["HK","RR","HL","UN"],3],
+["Chỉ giao vé cho đoàn khi trạng thái là:",["HL hoặc UN","HK hoặc RR","HL hoặc RR","Bất kỳ"],1],
+["Ba số đầu của số vé là:",["Số chuyến bay","Mã hãng phát hành vé","Mã đặt chỗ","Mã sân bay"],1],
+["Hạng đặt chỗ Y là:",["Thương gia","Phổ thông giá đầy đủ","Hạng nhất","Vé trẻ em"],1],
+["Dấu +1 sau giờ đến nghĩa là:",["Trễ 1 giờ","Đến ngày hôm sau","Thêm 1 khách","Nối chuyến"],1],
+["Mã ICAO của sân bay gồm:",["2 ký tự","3 ký tự","4 ký tự","6 ký tự"],2],
+["Nha Trang bay đến sân bay nào?",["NHA","CXR","DAD","HUI"],1],
+["PVG là:",["Hồng Kiều","Phố Đông","Đại Hưng","Thủ Đô"],1],
+["Tokyo có 2 sân bay là:",["NRT và KIX","NRT và HND","HND và KIX","NRT và ICN"],1],
+["Hộ chiếu loại D là:",["Phổ thông","Công vụ","Ngoại giao","Tạm thời"],2],
+["DOE trên hộ chiếu là:",["Ngày sinh","Ngày cấp","Ngày hết hạn","Nơi sinh"],2],
+["MRZ gồm:",["1 dòng 44 ký tự","2 dòng, mỗi dòng 44 ký tự","3 dòng 30 ký tự","2 dòng 20 ký tự"],1],
+["Visa do ai cấp?",["Nước mình","Nước đến","Hãng hàng không","Công ty du lịch"],1],
+["Visa đoàn Trung Quốc:",["Dán từng hộ chiếu","Cấp trên danh sách chung, cả đoàn đi cùng nhau","Khách tách đoàn tự do","Chỉ cho người nước ngoài"],1],
+["Port Visa Notification có hiệu lực:",["1 tuần","1 tháng","6 tháng","1 năm"],1],
+["Tiêu chuẩn hành lý trong tài liệu:",["5 + 15 kg","7 + 20 kg","10 + 23 kg","7 + 30 kg"],1],
+["Chất lỏng xách tay quốc tế mỗi chai tối đa:",["50 ml","100 ml","150 ml","500 ml"],1],
+["Pin sạc dự phòng phải để ở:",["Ký gửi","Xách tay","Cả hai đều được","Gửi riêng ở quầy"],1],
+["Pin trên mức nào bị cấm hoàn toàn?",["100 Wh","160 Wh","200 Wh","300 Wh"],1],
+["Tiền mặt không phải khai báo:",["3.000 USD","5.000 USD","7.000 USD","10.000 USD"],1],
+["Hàng trên bao nhiêu nên khai báo khi xuất cảnh?",["100 USD","300 USD","1.000 USD","5.000 USD"],1],
+["Hàng mua nước ngoài vượt mức miễn thuế thì đi:",["Luồng xanh","Luồng đỏ","Luồng nào cũng được","Cửa quá cảnh"],1],
+["Mất vali ký gửi, biên bản lập là:",["PNR","PIR","SSR","FOC"],1],
+["Chuyến bay 01:40 ngày 23/11, khách tập trung lúc:",["01:00 ngày 23/11","22:30 ngày 22/11","06:00 ngày 23/11","00:00 ngày 22/11"],1],
+["WCHC dành cho khách:",["Đi bộ xa khó","Không tự lên xuống thang","Hoàn toàn không tự di chuyển","Đi cùng trẻ nhỏ"],2]];
+const V=$("#v");let i=0,flip=false,deck=[...CARDS.keys()],known=new Set();
+function tab(n){[0,1,2].forEach(k=>$("#t"+k).classList.toggle("on",k==n));[card,quiz,calc][n]()}
+[0,1,2].forEach(k=>$("#t"+k).onclick=()=>tab(k));
+function card(){
+ if(!deck.length){V.innerHTML='<div class="box">Bạn đã thuộc hết thẻ.<div class="row"><button class="btn p" id="r">Học lại từ đầu</button></div></div>';$("#r").onclick=()=>{known.clear();deck=[...CARDS.keys()];i=0;card()};return}
+ i%=deck.length;const c=CARDS[deck[i]];
+ V.innerHTML=`<p class="mu">Thẻ ${i+1}/${deck.length} · đã thuộc ${known.size}/${CARDS.length}. Chạm vào thẻ để lật.</p><div class="box" id="fc"></div><div class="row"><button class="btn" id="no">Chưa thuộc</button><button class="btn p" id="ok">Đã thuộc</button></div>`;
+ $("#fc").textContent=flip?c[1]:c[0];$("#fc").onclick=()=>{flip=!flip;card()};
+ $("#ok").onclick=()=>{known.add(deck[i]);deck.splice(i,1);flip=false;card()};
+ $("#no").onclick=()=>{i++;flip=false;card()}}
+let q=[],qi=0,sc=0;
+function quiz(){if(!q.length){q=[...QS].sort(()=>Math.random()-.5);qi=0;sc=0}
+ if(qi>=q.length){V.innerHTML=`<div class="box"><b>Điểm: ${sc}/${q.length}</b><div class="row"><button class="btn p" id="r">Làm lại</button></div></div>`;$("#r").onclick=()=>{q=[];quiz()};return}
+ const [t,o,a]=q[qi];V.innerHTML=`<p class="mu">Câu ${qi+1}/${q.length} · điểm ${sc}</p><div class="box"><b>${t}</b><div id="o"></div><div class="fb" id="f"></div><div class="row" id="n"></div></div>`;
+ o.forEach((x,k)=>{const b=document.createElement("button");b.className="opt";b.textContent="ABCD"[k]+". "+x;b.onclick=()=>{[...$("#o").children].forEach((e,j)=>{e.disabled=true;if(j==a)e.classList.add("ok")});if(k==a){sc++;$("#f").textContent="Đúng"}else{b.classList.add("no");$("#f").textContent="Sai, đáp án đúng là "+"ABCD"[a]}$("#n").innerHTML='<button class="btn p" id="nx">Câu tiếp</button>';$("#nx").onclick=()=>{qi++;quiz()}};$("#o").appendChild(b)})}
+const TZ=[["Tokyo (NRT)",2],["Seoul (ICN)",2],["Bắc Kinh (PEK)",1],["Singapore (SIN)",1],["Đài Bắc (TPE)",1],["Dubai (DXB)",-3]];
+let s;
+const hm=m=>{m=((m%1440)+1440)%1440;return String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0")};
+function calc(){
+ const z=TZ[Math.floor(Math.random()*TZ.length)],dep=Math.floor(Math.random()*288)*5,dur=(210+Math.floor(Math.random()*30)*10);
+ const arrVN=dep+dur,arrLocal=arrVN+z[1]*60;s={dur,dep};
+ const day=Math.floor(arrLocal/1440)-0;const plus=day>0?"+"+day:(day<0?String(day):"");
+ V.innerHTML=`<div class="box"><b>Tính thời gian bay</b><p>Chuyến SGN → ${z[0]}, cất cánh ${hm(dep)} (giờ VN), hạ cánh <b>${hm(arrLocal)}${plus}</b> (giờ địa phương, ${z[1]>0?"nhanh hơn":"chậm hơn"} VN ${Math.abs(z[1])} giờ).</p>
+ <p>Thời gian bay: <input id="h" inputmode="numeric" placeholder="giờ"> giờ <input id="m" inputmode="numeric" placeholder="phút"> phút</p>
+ <div class="row"><button class="btn p" id="ck">Kiểm tra</button><button class="btn" id="nw">Đề khác</button></div><div class="fb" id="f"></div>
+ <hr style="border:0;border-top:1px solid var(--bd);margin:16px 0"><b>Giờ có mặt</b><p>Chuyến quốc tế bay lúc ${hm(dep)} ngày ${dep<180?"15/03":"14/03"}. Đoàn tập trung trước 3 giờ, tức lúc <button class="btn" id="sh">Xem đáp án</button></p><div class="fb" id="g"></div></div>`;
+ $("#ck").onclick=()=>{const t=(+$("#h").value||0)*60+(+$("#m").value||0);$("#f").textContent=t==dur?"Đúng":"Sai. Đáp án: "+Math.floor(dur/60)+" giờ "+dur%60+" phút. Đổi giờ đến về giờ VN rồi trừ giờ đi."};
+ $("#nw").onclick=calc;
+ $("#sh").onclick=()=>{const c=dep-180;$("#g").textContent=hm(c)+(c<0?" ngày "+(dep<180?"14/03":"13/03")+" (hôm trước)":" cùng ngày "+(dep<180?"15/03":"14/03"))}}
+card();
+</script></body></html>
